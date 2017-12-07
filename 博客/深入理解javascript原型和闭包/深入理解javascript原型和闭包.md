@@ -14,8 +14,8 @@
         - [对象是通过函数创建的](#%E5%AF%B9%E8%B1%A1%E6%98%AF%E9%80%9A%E8%BF%87%E5%87%BD%E6%95%B0%E5%88%9B%E5%BB%BA%E7%9A%84)
     - [3、prototype 原型](#3%E3%80%81prototype-%E5%8E%9F%E5%9E%8B)
         - [本文要点3](#%E6%9C%AC%E6%96%87%E8%A6%81%E7%82%B93)
-        - [prototype 和 constructor 属性](#prototype-%E5%92%8C-constructor-%E5%B1%9E%E6%80%A7)
-        - [在 prototype 上添加属性](#%E5%9C%A8-prototype-%E4%B8%8A%E6%B7%BB%E5%8A%A0%E5%B1%9E%E6%80%A7)
+        - [1、prototype 和 constructor 属性](#1%E3%80%81prototype-%E5%92%8C-constructor-%E5%B1%9E%E6%80%A7)
+        - [2、在 prototype 上添加属性](#2%E3%80%81%E5%9C%A8-prototype-%E4%B8%8A%E6%B7%BB%E5%8A%A0%E5%B1%9E%E6%80%A7)
     - [4、隐式原型](#4%E3%80%81%E9%9A%90%E5%BC%8F%E5%8E%9F%E5%9E%8B)
         - [本文要点4](#%E6%9C%AC%E6%96%87%E8%A6%81%E7%82%B94)
         - [1、`__proto__` 属性](#1%E3%80%81proto-%E5%B1%9E%E6%80%A7)
@@ -232,7 +232,7 @@ arr[2] = true;
 
 理解原型概念。
 
-### prototype 和 constructor 属性
+### 1、prototype 和 constructor 属性
 
 函数有一个默认属性 `prototype`，属性值是一个对象，该对象默认只有一个 `constructor` 属性，指向这个函数本身。
 
@@ -244,7 +244,7 @@ Object 原型里面有几个其他属性：
 
 ![3.prototype-图2](3.prototype-图2.png)
 
-### 在 prototype 上添加属性
+### 2、在 prototype 上添加属性
 
 ```javascript
 function Fn() {}
