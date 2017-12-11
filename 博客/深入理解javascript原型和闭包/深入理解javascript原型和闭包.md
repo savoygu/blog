@@ -1,7 +1,6 @@
 # 深入理解javascript原型和闭包
 
-> [王福朋 - 博客园](http://www.cnblogs.com/wangfupeng1988/) —— 《 [深入理解javascript原型和闭包](http://www.cnblogs.com/wangfupeng1988/p/3977924.html)
-》
+> [王福朋 - 博客园](http://www.cnblogs.com/wangfupeng1988/) —— 《 [深入理解javascript原型和闭包](http://www.cnblogs.com/wangfupeng1988/p/3977924.html)》
 
 <!-- TOC -->
 
@@ -1071,7 +1070,7 @@ bar(); // x: 2
 
 ### 文章初衷
 
-希望在一篇文章中进行概括说明这些内容（并不是说分开不好），只是这样读起来更加顺畅，找起来比较方便（离线也可以哦，已上传到 Github上，欢迎 star、fork）；
+希望在一篇文章中进行概括说明这些内容（并不是说分开不好），只是这样读起来更加顺畅，找起来比较方便（离线也可以哦，已上传到 [Github](https://github.com/savoygu/blog/)上，欢迎 star、fork）；
 
 自己也可以针对相关内容进行扩充（不用看到一些额外的相关知识就收藏一个网址^_^，你也可以把这篇文章转到你的账号下，进行扩充，说明来源即可）；
 
