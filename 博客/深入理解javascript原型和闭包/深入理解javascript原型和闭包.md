@@ -2,9 +2,12 @@
 
 > [王福朋 - 博客园](http://www.cnblogs.com/wangfupeng1988/) —— 《 [深入理解javascript原型和闭包](http://www.cnblogs.com/wangfupeng1988/p/3977924.html)》
 
+## 目录
+
 <!-- TOC -->
 
 - [深入理解javascript原型和闭包](#%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3javascript%E5%8E%9F%E5%9E%8B%E5%92%8C%E9%97%AD%E5%8C%85)
+    - [目录](#%E7%9B%AE%E5%BD%95)
     - [1. 一切都是对象](#1-%E4%B8%80%E5%88%87%E9%83%BD%E6%98%AF%E5%AF%B9%E8%B1%A1)
         - [本文要点1](#%E6%9C%AC%E6%96%87%E8%A6%81%E7%82%B91)
         - [1. javascript 数据类型](#1-javascript-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)
@@ -114,6 +117,8 @@ show();
 var fn = function () {};
 console.log(fn instanceof Object);  // true
 ```
+
+**[⬆ back to top](#目录)**
 
 ### 2. javascript 对象
 
@@ -229,6 +234,8 @@ arr[2] = true;
 
 那我们称该对象为函数实例对象的原型
 
+**[⬆ back to top](#目录)**
+
 ### 本文要点3
 
 理解原型概念。
@@ -256,6 +263,8 @@ Fn.prototype.getYear = function () {
 ```
 
 ![3.prototype-图3](3.prototype-图3.png)
+
+**[⬆ back to top](#目录)**
 
 ## 4. 隐式原型
 
@@ -320,6 +329,8 @@ console.log(fn(5, 6));  // 11
 
 `Function` 是一个函数，函数是一种对象，对象有 `__proto__` 属性。 既然是函数，那么是被 `Function` 创建的，也就是 `Function` 是被自身创建的。对象的 `__proto__` 指向创建它的函数的 `prototype`，所以 `Function` 的 `__proto__` 指向了自身的 `prototype`。
 
+**[⬆ back to top](#目录)**
+
 ## 5. instanceof
 
 > 原文链接：[http://www.cnblogs.com/wangfupeng1988/p/3979290.html]((http://www.cnblogs.com/wangfupeng1988/p/3979290.html))
@@ -361,6 +372,8 @@ console.log(Object instanceof Function);  // true
 console.log(Function instanceof Object);  // true
 console.log(Function instanceof Function);  // true
 ```
+
+**[⬆ back to top](#目录)**
 
 ## 6. “继承”
 
@@ -424,11 +437,15 @@ for (var item2 in f1) {
 
 每个函数都有 call, bind 方法，都有 length, arguments, caller 等属性。这也是“继承”的。函数是由 Function 函数创建，`__proto__` 属性指向 Function.prototype，因此继承 Function.prototype 中的方法。
 
+**[⬆ back to top](#目录)**
+
 ## 7. 原型灵活性
 
 > 原文链接：[http://www.cnblogs.com/wangfupeng1988/p/3980065.html]((http://www.cnblogs.com/wangfupeng1988/p/3980065.html))
 
 偶不想表^_^。
+
+**[⬆ back to top](#目录)**
 
 ## 8. 简述【执行上下文】上
 
@@ -475,6 +492,8 @@ function fn(x) {
 
 var fn = new Function('x', 'console.log(x + 5)');
 ```
+
+**[⬆ back to top](#目录)**
 
 ## 9. 简述【执行上下文】下
 
@@ -537,6 +556,8 @@ bar(fn);
 | 自由变量的取值作用域 | 赋值   |
 
 通俗执行上下文环境定义：在执行代码之前，把将要用到的所有的变量都事先拿出来，有的直接赋值了，有的先用 undefined 占个空。
+
+**[⬆ back to top](#目录)**
 
 ## 10. this
 
@@ -695,6 +716,8 @@ obj.test(); // true
 
 > 另外需要注意的是，箭头函数不能用 new 调用，不能 bind() 到某个对象(虽然 bind() 方法调用没问题，但是不会产生预期效果)。不管在什么情况下使用箭头函数，它本身是没有绑定 this 的，它用的是直接外层函数(即包含它的最近的一层函数或函数表达式)绑定的 this。
 
+**[⬆ back to top](#目录)**
+
 ## 11. 执行上下文栈
 
 > 原文链接：[http://www.cnblogs.com/wangfupeng1988/p/3989357.html]((http://www.cnblogs.com/wangfupeng1988/p/3989357.html))
@@ -785,6 +808,8 @@ bar 函数执行上下文环境
 
  ![11.执行上下文栈-图5](11.执行上下文栈-图5.png)
 
+**[⬆ back to top](#目录)**
+
 ## 12. 简介【作用域】
 
 > 原文链接：[http://www.cnblogs.com/wangfupeng1988/p/3991151.html]((http://www.cnblogs.com/wangfupeng1988/p/3991151.html))
@@ -806,6 +831,8 @@ bar 函数执行上下文环境
 在作用域中存在上下级关系，上下级关系的确定就看函数是在哪个作用域下创建的。例如：fn 作用域下创建了 bar 函数，那么 “fn 作用域” 就是 “bar 作用域” 的上级。
 
 作用域最大的用处就是隔离变量，不同作用域下同名变量不会有冲突。例如以上代码中，三个作用域下都声明了“a” 这个变量，但是他们不会有冲突。各自作用域下，用各自的“a”。
+
+**[⬆ back to top](#目录)**
 
 ## 13. 【作用域】和【上下文环境】
 
@@ -855,6 +882,8 @@ bar 函数执行上下文环境
 
 所以，如果要找一个作用域下某个变量的值，就需要找到这个作用域对应的执行上下文环境，再在其中寻找变量的值。
 
+**[⬆ back to top](#目录)**
+
 ## 14. 从【自由变量】到【作用域链】
 
 > 原文链接：[http://www.cnblogs.com/wangfupeng1988/p/3992795.html]((http://www.cnblogs.com/wangfupeng1988/p/3992795.html))
@@ -898,9 +927,11 @@ function fn() {
 
 示例代码：
 
-![14.作用域和自由变量-图2](14.作用域和自由变量-图2.png)
+![14.作用域和自由变量-图2](14.作用域和自由变量-图1.png)
 
 以上代码中：fn() 返回的是 bar 函数 ，赋值给 x 。执行 x()，即执行 bar 函数代码。取 b 的值时，直接在 fn 作用域取出。取 a 的值时，试图在 fn 作用域取，但是取不到，只能转向创建 fn 的那个作用域中去查找，结果找到了。
+
+**[⬆ back to top](#目录)**
 
 ## 15. 闭包
 
@@ -1059,6 +1090,8 @@ bar(); // x: 2
 
 从代码输出可以看到，闭包并不是属于某一个内部函数，也恰好印证了上面说的。
 
+**[⬆ back to top](#目录)**
+
 ## 16. 总结
 
 ### 文章说明
@@ -1087,3 +1120,5 @@ bar(); // x: 2
 如果你看到这里没有提到的相关内容，也可以给我链接，我会进行补充，并贴上你的大名；
 
 撒花，待续，期待你们的加入……
+
+**[⬆ back to top](#目录)**
