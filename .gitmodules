@@ -1,0 +1,3 @@
+[submodule "源码/jQuery/jquery"]
+	path = 源码/jQuery/jquery
+	url = git@github.com:jquery/jquery.git
