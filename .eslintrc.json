@@ -1,0 +1,10 @@
+{
+  "root": true,
+  "extends": "standard",
+  "rules": {
+    "camelcase": 0,
+    "no-return-await": 0,
+    "semi": [2, "always"],
+    "one-var": 0
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "blog",
+  "version": "0.0.0",
+  "description": "个人博客，以 Node.js、书籍、博客、源码 话题为主，开启程序人生。",
+  "main": "Node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/savoygu/blog.git"
+  },
+  "keywords": [
+    "blog",
+    "博客",
+    "Node.js",
+    "书籍",
+    "源码"
+  ],
+  "author": "gusaifei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/savoygu/blog/issues"
+  },
+  "homepage": "https://github.com/savoygu/blog#readme",
+  "devDependencies": {
+    "eslint": "^4.14.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "estraverse": "^4.2.0"
+  }
+}
