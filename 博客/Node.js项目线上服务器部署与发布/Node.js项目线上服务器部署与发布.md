@@ -6,6 +6,7 @@
 
 - MySQL数据库导入与导出
 - 脚本部署前端项目
+- FTP 批量上传文件夹
 
 ***
 
@@ -44,6 +45,7 @@
     - [上传项目代码到线上私有 Git 仓库](#%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81%E5%88%B0%E7%BA%BF%E4%B8%8A%E7%A7%81%E6%9C%89-git-%E4%BB%93%E5%BA%93)
     - [配置 PM2 一键部署线上项目结构](#%E9%85%8D%E7%BD%AE-pm2-%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2%E7%BA%BF%E4%B8%8A%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84)
     - [通过脚本部署前端项目（新增）](#%E9%80%9A%E8%BF%87%E8%84%9A%E6%9C%AC%E9%83%A8%E7%BD%B2%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE%EF%BC%88%E6%96%B0%E5%A2%9E%EF%BC%89)
+    - [FTP 批量上传文件夹（新增）](#ftp-%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%A4%B9%EF%BC%88%E6%96%B0%E5%A2%9E%EF%BC%89)
   - [使用和配置更安全的 HTTPS 协议](#%E4%BD%BF%E7%94%A8%E5%92%8C%E9%85%8D%E7%BD%AE%E6%9B%B4%E5%AE%89%E5%85%A8%E7%9A%84-https-%E5%8D%8F%E8%AE%AE)
     - [申请证书](#%E7%94%B3%E8%AF%B7%E8%AF%81%E4%B9%A6)
     - [Nginx 配置](#nginx-%E9%85%8D%E7%BD%AE)
@@ -764,6 +766,59 @@ echo 上传完成！
 127.0.0.1       localhost.localdomain localhost
 127.0.0.1       xx
 ```
+
+### FTP 批量上传文件夹（新增）
+
+> [https://segmentfault.com/a/1190000000777713](https://segmentfault.com/a/1190000000777713)
+
+```
+#!/bin/bash
+updir=/root/tmp        #要上传的文件夹
+todir=tmp              #目标文件夹
+ip=127.0.0.1           #服务器
+user=username          #ftp用户名
+password=passwd        #ftp密码
+sss=`find $updir -type d -printf $todir/'%P\n'| awk '{if ($0 == "")next;print "mkdir " $0}'`
+aaa=`find $updir -type f -printf 'put %p %P \n'`
+ftp -nv $ip <<EOF
+user $user $password
+type binary
+prompt
+$sss
+cd $todir
+$aaa
+quit
+EOF
+```
+
+**简要说明:**
+
+核心思想:
+
+1. 初始化上传目录结构
+2. 初始化目录之后就可以直接使用put命令上传文件了
+3. 主要还是使用ftp自身的命令
+4. 格式化输出(可看作是FTP的宏命令)
+5. 保守的重定向输入流
+
+核心语句只有两句：
+
+第一句：
+
+```
+sss=find /root/sk -type d -printf '%P\n'| awk '{if ($0 == "")next;print "mkdir " $0}'
+```
+
+这句主要是使用find找出目录结构，然后格式化输出，最后就是添加到FTP初始化目录结构。
+
+第二句：
+
+```
+aaa=find /root/sk -type f -printf 'put %p %P \n'
+```
+
+这句主要是使用find找出非目录文件，然后格式化输出，最后就是在初始化目录之后可以直接使用put上传文件。
+
 
 **[⬆ back to top](#目录)**
 
