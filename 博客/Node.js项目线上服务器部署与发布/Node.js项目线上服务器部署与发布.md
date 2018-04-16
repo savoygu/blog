@@ -16,45 +16,45 @@
 
 - [Node.js项目线上服务器部署与发布](#nodejs%E9%A1%B9%E7%9B%AE%E7%BA%BF%E4%B8%8A%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%8F%91%E5%B8%83)
   - [目录](#%E7%9B%AE%E5%BD%95)
-  - [远程登录服务器](#%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E6%9C%8D%E5%8A%A1%E5%99%A8)
-    - [ssh 远程登录服务器](#ssh-%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E6%9C%8D%E5%8A%A1%E5%99%A8)
-    - [配置 root 及应用账号权限](#%E9%85%8D%E7%BD%AE-root-%E5%8F%8A%E5%BA%94%E7%94%A8%E8%B4%A6%E5%8F%B7%E6%9D%83%E9%99%90)
-    - [配置本地无密码 ssh 登录](#%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E6%97%A0%E5%AF%86%E7%A0%81-ssh-%E7%99%BB%E5%BD%95)
-      - [先决条件](#%E5%85%88%E5%86%B3%E6%9D%A1%E4%BB%B6)
-      - [让我们开始吧](#%E8%AE%A9%E6%88%91%E4%BB%AC%E5%BC%80%E5%A7%8B%E5%90%A7)
-  - [增强服务器安全等级](#%E5%A2%9E%E5%BC%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E5%85%A8%E7%AD%89%E7%BA%A7)
-    - [修改服务器默认登录端口](#%E4%BF%AE%E6%94%B9%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%BB%98%E8%AE%A4%E7%99%BB%E5%BD%95%E7%AB%AF%E5%8F%A3)
-    - [配置 iptables 和 Fail2Ban 增强安全防护](#%E9%85%8D%E7%BD%AE-iptables-%E5%92%8C-fail2ban-%E5%A2%9E%E5%BC%BA%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4)
-      - [配置 iptables：](#%E9%85%8D%E7%BD%AE-iptables%EF%BC%9A)
-      - [配置 Fail2Ban：](#%E9%85%8D%E7%BD%AE-fail2ban%EF%BC%9A)
-  - [搭建 Nodejs 生产环境](#%E6%90%AD%E5%BB%BA-nodejs-%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83)
-    - [搭建服务器的 Nodejs 环境](#%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84-nodejs-%E7%8E%AF%E5%A2%83)
-    - [借助 pm2 让 Node.js 服务常驻](#%E5%80%9F%E5%8A%A9-pm2-%E8%AE%A9-nodejs-%E6%9C%8D%E5%8A%A1%E5%B8%B8%E9%A9%BB)
-  - [配置 Nginx 实现反向代理](#%E9%85%8D%E7%BD%AE-nginx-%E5%AE%9E%E7%8E%B0%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86)
+  - [一、远程登录服务器](#%E4%B8%80%E3%80%81%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E6%9C%8D%E5%8A%A1%E5%99%A8)
+    - [1.1 ssh 远程登录服务器](#11-ssh-%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E6%9C%8D%E5%8A%A1%E5%99%A8)
+    - [1.2 配置 root 及应用账号权限](#12-%E9%85%8D%E7%BD%AE-root-%E5%8F%8A%E5%BA%94%E7%94%A8%E8%B4%A6%E5%8F%B7%E6%9D%83%E9%99%90)
+    - [1.3 配置本地无密码 ssh 登录](#13-%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E6%97%A0%E5%AF%86%E7%A0%81-ssh-%E7%99%BB%E5%BD%95)
+      - [1.3.1 先决条件](#131-%E5%85%88%E5%86%B3%E6%9D%A1%E4%BB%B6)
+      - [1.3.2 让我们开始吧](#132-%E8%AE%A9%E6%88%91%E4%BB%AC%E5%BC%80%E5%A7%8B%E5%90%A7)
+  - [二、增强服务器安全等级](#%E4%BA%8C%E3%80%81%E5%A2%9E%E5%BC%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E5%85%A8%E7%AD%89%E7%BA%A7)
+    - [2.1 修改服务器默认登录端口](#21-%E4%BF%AE%E6%94%B9%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%BB%98%E8%AE%A4%E7%99%BB%E5%BD%95%E7%AB%AF%E5%8F%A3)
+    - [2.2 配置 iptables 和 Fail2Ban 增强安全防护](#22-%E9%85%8D%E7%BD%AE-iptables-%E5%92%8C-fail2ban-%E5%A2%9E%E5%BC%BA%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4)
+      - [2.2.1 配置 iptables：](#221-%E9%85%8D%E7%BD%AE-iptables%EF%BC%9A)
+      - [2.2.2 配置 Fail2Ban：](#222-%E9%85%8D%E7%BD%AE-fail2ban%EF%BC%9A)
+  - [三、搭建 Nodejs 生产环境](#%E4%B8%89%E3%80%81%E6%90%AD%E5%BB%BA-nodejs-%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83)
+    - [3.1 搭建服务器的 Nodejs 环境](#31-%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84-nodejs-%E7%8E%AF%E5%A2%83)
+    - [3.2 借助 pm2 让 Node.js 服务常驻](#32-%E5%80%9F%E5%8A%A9-pm2-%E8%AE%A9-nodejs-%E6%9C%8D%E5%8A%A1%E5%B8%B8%E9%A9%BB)
+  - [四、配置 Nginx 实现反向代理](#%E5%9B%9B%E3%80%81%E9%85%8D%E7%BD%AE-nginx-%E5%AE%9E%E7%8E%B0%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86)
     - [配置 Nginx 反向代理 Nodejs 端口](#%E9%85%8D%E7%BD%AE-nginx-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86-nodejs-%E7%AB%AF%E5%8F%A3)
-  - [服务器配置安装 MongoDB](#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E5%AE%89%E8%A3%85-mongodb)
-    - [在 Ubuntu 14.04 上安装 MongoDB](#%E5%9C%A8-ubuntu-1404-%E4%B8%8A%E5%AE%89%E8%A3%85-mongodb)
-    - [修改 MongoDB 默认端口](#%E4%BF%AE%E6%94%B9-mongodb-%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3)
-    - [往线上 MongoDB 导入单表数据或数据库](#%E5%BE%80%E7%BA%BF%E4%B8%8A-mongodb-%E5%AF%BC%E5%85%A5%E5%8D%95%E8%A1%A8%E6%95%B0%E6%8D%AE%E6%88%96%E6%95%B0%E6%8D%AE%E5%BA%93)
-    - [往线上 MySQL 导入单表数据或数据库【新增】](#%E5%BE%80%E7%BA%BF%E4%B8%8A-mysql-%E5%AF%BC%E5%85%A5%E5%8D%95%E8%A1%A8%E6%95%B0%E6%8D%AE%E6%88%96%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%90%E6%96%B0%E5%A2%9E%E3%80%91)
-    - [为上线项目配置 MongoDB 数据库读写权限](#%E4%B8%BA%E4%B8%8A%E7%BA%BF%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE-mongodb-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BB%E5%86%99%E6%9D%83%E9%99%90)
-    - [从一台服务器迁移数据到另一个线上 MongoDB 中](#%E4%BB%8E%E4%B8%80%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB%E6%95%B0%E6%8D%AE%E5%88%B0%E5%8F%A6%E4%B8%80%E4%B8%AA%E7%BA%BF%E4%B8%8A-mongodb-%E4%B8%AD)
-    - [为数据库实现定时备份方案](#%E4%B8%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%9E%E7%8E%B0%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%88)
-    - [上传到数据库备份到七牛云](#%E4%B8%8A%E4%BC%A0%E5%88%B0%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD%E5%88%B0%E4%B8%83%E7%89%9B%E4%BA%91)
-  - [向服务器正式部署和发布上线 Nodejs 项目](#%E5%90%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%AD%A3%E5%BC%8F%E9%83%A8%E7%BD%B2%E5%92%8C%E5%8F%91%E5%B8%83%E4%B8%8A%E7%BA%BF-nodejs-%E9%A1%B9%E7%9B%AE)
-    - [上传项目代码到线上私有 Git 仓库](#%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81%E5%88%B0%E7%BA%BF%E4%B8%8A%E7%A7%81%E6%9C%89-git-%E4%BB%93%E5%BA%93)
-    - [配置 PM2 一键部署线上项目结构](#%E9%85%8D%E7%BD%AE-pm2-%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2%E7%BA%BF%E4%B8%8A%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84)
-    - [通过脚本部署前端项目（新增）](#%E9%80%9A%E8%BF%87%E8%84%9A%E6%9C%AC%E9%83%A8%E7%BD%B2%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE%EF%BC%88%E6%96%B0%E5%A2%9E%EF%BC%89)
-    - [FTP 批量上传文件夹（新增）](#ftp-%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%A4%B9%EF%BC%88%E6%96%B0%E5%A2%9E%EF%BC%89)
-  - [使用和配置更安全的 HTTPS 协议](#%E4%BD%BF%E7%94%A8%E5%92%8C%E9%85%8D%E7%BD%AE%E6%9B%B4%E5%AE%89%E5%85%A8%E7%9A%84-https-%E5%8D%8F%E8%AE%AE)
-    - [申请证书](#%E7%94%B3%E8%AF%B7%E8%AF%81%E4%B9%A6)
-    - [Nginx 配置](#nginx-%E9%85%8D%E7%BD%AE)
+  - [五、服务器配置安装 MongoDB](#%E4%BA%94%E3%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E5%AE%89%E8%A3%85-mongodb)
+    - [5.1 在 Ubuntu 14.04 上安装 MongoDB](#51-%E5%9C%A8-ubuntu-1404-%E4%B8%8A%E5%AE%89%E8%A3%85-mongodb)
+    - [5.2 修改 MongoDB 默认端口](#52-%E4%BF%AE%E6%94%B9-mongodb-%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3)
+    - [5.3 往线上 MongoDB 导入单表数据或数据库](#53-%E5%BE%80%E7%BA%BF%E4%B8%8A-mongodb-%E5%AF%BC%E5%85%A5%E5%8D%95%E8%A1%A8%E6%95%B0%E6%8D%AE%E6%88%96%E6%95%B0%E6%8D%AE%E5%BA%93)
+    - [5.4 往线上 MySQL 导入单表数据或数据库（新增）](#54-%E5%BE%80%E7%BA%BF%E4%B8%8A-mysql-%E5%AF%BC%E5%85%A5%E5%8D%95%E8%A1%A8%E6%95%B0%E6%8D%AE%E6%88%96%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88%E6%96%B0%E5%A2%9E%EF%BC%89)
+    - [5.5 为上线项目配置 MongoDB 数据库读写权限](#55-%E4%B8%BA%E4%B8%8A%E7%BA%BF%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE-mongodb-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BB%E5%86%99%E6%9D%83%E9%99%90)
+    - [5.6 从一台服务器迁移数据到另一个线上 MongoDB 中](#56-%E4%BB%8E%E4%B8%80%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB%E6%95%B0%E6%8D%AE%E5%88%B0%E5%8F%A6%E4%B8%80%E4%B8%AA%E7%BA%BF%E4%B8%8A-mongodb-%E4%B8%AD)
+    - [5.7 为数据库实现定时备份方案](#57-%E4%B8%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%9E%E7%8E%B0%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%88)
+    - [5.8 上传到数据库备份到七牛云](#58-%E4%B8%8A%E4%BC%A0%E5%88%B0%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD%E5%88%B0%E4%B8%83%E7%89%9B%E4%BA%91)
+  - [六、向服务器正式部署和发布上线 Nodejs 项目](#%E5%85%AD%E3%80%81%E5%90%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%AD%A3%E5%BC%8F%E9%83%A8%E7%BD%B2%E5%92%8C%E5%8F%91%E5%B8%83%E4%B8%8A%E7%BA%BF-nodejs-%E9%A1%B9%E7%9B%AE)
+    - [6.1 上传项目代码到线上私有 Git 仓库](#61-%E4%B8%8A%E4%BC%A0%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81%E5%88%B0%E7%BA%BF%E4%B8%8A%E7%A7%81%E6%9C%89-git-%E4%BB%93%E5%BA%93)
+    - [6.2 配置 PM2 一键部署线上项目结构](#62-%E9%85%8D%E7%BD%AE-pm2-%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2%E7%BA%BF%E4%B8%8A%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84)
+    - [6.3 通过脚本部署前端项目（新增）](#63-%E9%80%9A%E8%BF%87%E8%84%9A%E6%9C%AC%E9%83%A8%E7%BD%B2%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE%EF%BC%88%E6%96%B0%E5%A2%9E%EF%BC%89)
+    - [6.4 FTP 批量上传文件夹（新增）](#64-ftp-%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%A4%B9%EF%BC%88%E6%96%B0%E5%A2%9E%EF%BC%89)
+  - [七、使用和配置更安全的 HTTPS 协议](#%E4%B8%83%E3%80%81%E4%BD%BF%E7%94%A8%E5%92%8C%E9%85%8D%E7%BD%AE%E6%9B%B4%E5%AE%89%E5%85%A8%E7%9A%84-https-%E5%8D%8F%E8%AE%AE)
+    - [7.1 申请证书](#71-%E7%94%B3%E8%AF%B7%E8%AF%81%E4%B9%A6)
+    - [7.2 Nginx 配置](#72-nginx-%E9%85%8D%E7%BD%AE)
 
 <!-- /TOC -->
 
-## 远程登录服务器
+## 一、远程登录服务器
 
-### ssh 远程登录服务器
+### 1.1 ssh 远程登录服务器
 
 ```bash
 # ssh 登录
@@ -71,7 +71,7 @@ fdisk -l
 df -h
 ```
 
-### 配置 root 及应用账号权限
+### 1.2 配置 root 及应用账号权限
 
 用户定制：
 
@@ -92,11 +92,11 @@ ssh tanya@47.xx.xx.xx # 然后输入密码，即可登录成功
 
 每次登录都要输入密码好烦啊，当然琐碎的事情，总是存在处理它的办法。接下来，无密码登录登场。
 
-### 配置本地无密码 ssh 登录
+### 1.3 配置本地无密码 ssh 登录
 
 以下操作的用户是 `tanya`：
 
-#### 先决条件
+#### 1.3.1 先决条件
 
 你需要知道：
 
@@ -110,7 +110,7 @@ ssh tanya@47.xx.xx.xx # 然后输入密码，即可登录成功
 vim 的基本操作：编辑文件、粘贴内容、保存并退出
 
 关于 vim 的知识可以阅读：[博客园](http://www.cnblogs.com)星尘： [http://www.cnblogs.com/88999660/articles/1581524.html](http://www.cnblogs.com/88999660/articles/1581524.html)
-#### 让我们开始吧
+#### 1.3.2 让我们开始吧
 
 需要开启两个终端：一个服务器终端，一个本地终端
 
@@ -149,9 +149,9 @@ ssh tanya@47.xx.xx.xx # 无需输入密码，即可登录成功
 
 **[⬆ back to top](#目录)**
 
-## 增强服务器安全等级
+## 二、增强服务器安全等级
 
-### 修改服务器默认登录端口
+### 2.1 修改服务器默认登录端口
 
 ```bash
 # 编辑文件
@@ -172,9 +172,9 @@ ssh -p xx tanya@47.xx.xx.xx
 
 有可能登录不上去，需要去控制台修改安全组规则，把你的端口加进去。
 
-### 配置 iptables 和 Fail2Ban 增强安全防护
+### 2.2 配置 iptables 和 Fail2Ban 增强安全防护
 
-#### 配置 iptables：
+#### 2.2.1 配置 iptables：
 
 ```bash
 # 升级更新一下系统
@@ -263,7 +263,7 @@ iptables-restore /etc/iptables.up.rules
 sudo chmod +x /etc/network/if-up.d/iptables
 ```
 
-#### 配置 Fail2Ban：
+#### 2.2.2 配置 Fail2Ban：
 
 ```bash
 # 安装  fail2ban
@@ -281,9 +281,9 @@ sudo service fail2ban start
 
 **[⬆ back to top](#目录)**
 
-## 搭建 Nodejs 生产环境
+## 三、搭建 Nodejs 生产环境
 
-### 搭建服务器的 Nodejs 环境
+### 3.1 搭建服务器的 Nodejs 环境
 
 ```bash
 # 更新服务器
@@ -315,7 +315,7 @@ npm install pm2 webpack gulp grunt-cli -g
 
 ```
 
-### 借助 pm2 让 Node.js 服务常驻
+### 3.2 借助 pm2 让 Node.js 服务常驻
 
 ```bash
 # 启动服务
@@ -333,7 +333,7 @@ pm2 logs
 
 **[⬆ back to top](#目录)**
 
-## 配置 Nginx 实现反向代理
+## 四、配置 Nginx 实现反向代理
 
 ### 配置 Nginx 反向代理 Nodejs 端口
 
@@ -381,9 +381,9 @@ sudo nginx -s reload
 
 **[⬆ back to top](#目录)**
 
-## 服务器配置安装 MongoDB
+## 五、服务器配置安装 MongoDB
 
-### 在 Ubuntu 14.04 上安装 MongoDB
+### 5.1 在 Ubuntu 14.04 上安装 MongoDB
 
 ```bash
 # 安装，https://docs.mongodb.com/v3.4/tutorial/install-mongodb-on-ubuntu/
@@ -398,7 +398,7 @@ sudo service mognod stop
 sudo service mongod restart
 ```
 
-### 修改 MongoDB 默认端口
+### 5.2 修改 MongoDB 默认端口
 
 ```bash
 # 编辑配置文件
@@ -412,7 +412,7 @@ net:
 sudo service mongod restart
 ```
 
-### 往线上 MongoDB 导入单表数据或数据库
+### 5.3 往线上 MongoDB 导入单表数据或数据库
 
 如果已经修改过端口，需要把 27017 换成修改的端口。
 
@@ -443,7 +443,7 @@ mongo --host 127.0.0.1:27017 dream-wall --eval "db.dropDatabase()"
 
 ```
 
-### 往线上 MySQL 导入单表数据或数据库【新增】
+### 5.4 往线上 MySQL 导入单表数据或数据库（新增）
 
 ```bash
 # 导入数据库
@@ -455,7 +455,7 @@ mysqldump -u root -p dream-wall > dream-wall-backup.sql
 
 ```
 
-### 为上线项目配置 MongoDB 数据库读写权限
+### 5.5 为上线项目配置 MongoDB 数据库读写权限
 
 创建用户及授权
 
@@ -498,7 +498,7 @@ show tables
 db.dreams.find()
 ```
 
-### 从一台服务器迁移数据到另一个线上 MongoDB 中
+### 5.6 从一台服务器迁移数据到另一个线上 MongoDB 中
 
 就是数据库数据的导入和导出操作
 
@@ -522,7 +522,7 @@ mongoimport -h 127.0.0.1:19999 -d dream-wall -u tanya_dream-wall_wheel -p tanya 
 scp -P xx root@47.xx.xx.xx:/home/xx/dbbackup ./
 ```
 
-### 为数据库实现定时备份方案
+### 5.7 为数据库实现定时备份方案
 
 备份脚本
 
@@ -568,7 +568,7 @@ crontab -e
 NODE_ENV=$backUpFolder@$backFileName /home/tanya/.nvm/versions/node/v8.9.3/bin/node /home/tanya/tasks/upload.js
 ```
 
-### 上传到数据库备份到七牛云
+### 5.8 上传到数据库备份到七牛云
 
 你需要先在七牛云上创建存储的空间及找到你的公钥和私钥。并在备份脚本中传入 QINIU_BUCKET、QINIU_ACCESS_KEY、QINIU_SECRET_KEY，修改一下上面的备份脚本
 
@@ -619,9 +619,9 @@ formUploader.putFile(uploadToken, null, localFile, putExtra, function(respErr,
 
 **[⬆ back to top](#目录)**
 
-## 向服务器正式部署和发布上线 Nodejs 项目
+## 六、向服务器正式部署和发布上线 Nodejs 项目
 
-### 上传项目代码到线上私有 Git 仓库
+### 6.1 上传项目代码到线上私有 Git 仓库
 
 你需要了解一下 git 基本操作：
 
@@ -639,7 +639,7 @@ git commit -m 'init'
 git push origin -u master
 ```
 
-### 配置 PM2 一键部署线上项目结构
+### 6.2 配置 PM2 一键部署线上项目结构
 
 > pm2 文档：http://pm2.keymetrics.io/docs/usage/deployment/
 
@@ -715,7 +715,7 @@ pm2 deploy ecosystem.json production
 #esac
 ```
 
-### 通过脚本部署前端项目（新增）
+### 6.3 通过脚本部署前端项目（新增）
 
 ```bash
 #!bin/sh
@@ -767,7 +767,7 @@ echo 上传完成！
 127.0.0.1       xx
 ```
 
-### FTP 批量上传文件夹（新增）
+### 6.4 FTP 批量上传文件夹（新增）
 
 > [https://segmentfault.com/a/1190000000777713](https://segmentfault.com/a/1190000000777713)
 
@@ -822,17 +822,17 @@ aaa=find /root/sk -type f -printf 'put %p %P \n'
 
 **[⬆ back to top](#目录)**
 
-## 使用和配置更安全的 HTTPS 协议
+## 七、使用和配置更安全的 HTTPS 协议
 
 选购申请SSL证书：腾讯云、阿里云、七牛云、又拍云
 
-### 申请证书
+### 7.1 申请证书
 
 > 腾讯云证书申请地址：[https://console.cloud.tencent.com/ssl](https://console.cloud.tencent.com/ssl)
 
 填写一些信息：绑定的域名、邮箱、...
 
-### Nginx 配置
+### 7.2 Nginx 配置
 
 > 腾讯云证书安装文档：[https://cloud.tencent.com/document/product/400/4143](https://cloud.tencent.com/document/product/400/4143)
 
