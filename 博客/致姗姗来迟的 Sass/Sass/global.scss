@@ -1,0 +1,86 @@
+/* Line 2338 of global.css */
+.feedback {
+  color: #333;
+  padding: 0.7em 5em 0.7em 4.3em;
+  margin: 1.2em 0 1em 0 !important;
+  clear: left;
+}
+
+@mixin feedback-appearance($bg-color, $icon, $border-color) {
+  background: $bg-color url(/img/circle-#{$icon}.gif) 1.3em 0.5em no-repeat;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+}
+
+.confirm,
+.positive,
+.notice {
+  @extend .feedback;
+  @include feedback-appearance(#eff6e8, "check-green", #A5CC7A);
+}
+
+.warning,
+.warningPersistant {
+  @extend .feedback;
+  @include feedback-appearance(#fff, "yellow-exclamation", #ddd);
+}
+
+.error {
+  @extend .feedback;
+  @include feedback-appearance(#fff, "red-exclamation", #ddd);
+}
+
+.info {
+  @extend .feedback;
+  @include feedback-appearance(#fff, "yellow-info", #ddd);
+}
+
+.feedback {
+  div {
+      display: inline;
+      background: none;
+      padding: 0;
+      margin: 0;
+  }
+
+  p { margin: 0; }
+}
+
+h3, strong {
+  .feedback & {
+      font-weight: bold !important;
+      letter-spacing: normal !important;
+      font-size: 1.2em !important;
+      padding: 0 0.5em 0 0 !important;
+      margin: 0 !important;
+      display: inline;
+  }
+  .positive &,
+  .confirm &           { color: #e18015; }
+
+  .warning &,
+  .warningPersistant & { color: #b50b05; }
+
+  .error &             { color: #b50b05; }
+}
+
+.confirm {
+  &:hover { color: #030; }
+  h2 & {
+      font-size: 50%;
+      float: right;
+  }
+}
+
+.instruction {
+  background: #EAF2FA url(/img/feature-box.gif) 0 0 no-repeat;
+  margin-bottom: 1em;
+  color: #6C7D8E;
+
+  div {
+      background: url(/img/feature-box.gif) 100% 100% no-repeat;
+      padding: 15px 15px 10px 15px;
+  }
+
+  h3 { color: #6C7D8E; }
+}
