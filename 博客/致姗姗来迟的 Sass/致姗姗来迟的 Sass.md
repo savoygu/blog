@@ -25,7 +25,7 @@
 
 #### 形式上
 
-『Sass』使用「缩进」代替花括号「{」 和 「}」，使用「换行」代替分号「;」
+『Sass』使用「缩进」代替花括号 `{` 和 `}`，使用「换行」代替分号 `;`
 
 ```scss
 .container
@@ -71,7 +71,7 @@
 
 ##### 注释
 
-『Sass』中注释是基于行的，要么是一整行，要么是换行嵌套，与『SCSS』一样，『Sass』支持两种注释，一种是以 `/*` 开始，不需要以 `*/` 结尾，编译成 CSS 时，会一块输出， 一种是 `//`，不会随 CSS 输出。
+『Sass』中注释是基于行的，要么是一整行，要么是换行嵌套，与『SCSS』一样，『Sass』支持两种注释，一种是以 `/*` 开始，不需要以 `*/` 结尾，编译成 CSS 时，会一块输出， 一种是 `//`，不会随 CSS 输出。
 
 ```sass
 /* 一整行——这些注释会出现在输出的 CSS中
@@ -161,11 +161,10 @@ sass-convert global.sass global.scss
 
 参考资料：
 
-[https://stackoverflow.com/questions/5654447/whats-the-difference-between-scss-and-sass](https://stackoverflow.com/questions/5654447/whats-the-difference-between-scss-and-sass) 『stackoverflow』
-
-[http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax) 『Sass 文档』
-
-[https://sass-lang.com/documentation/file.INDENTED_SYNTAX.html#Sass_Syntax_Differences](https://sass-lang.com/documentation/file.INDENTED_SYNTAX.html#Sass_Syntax_Differences)『Sass 文档——缩进语法』
+- [https://stackoverflow.com/questions/5654447/whats-the-difference-between-scss-and-sass](https://stackoverflow.com/questions/5654447/whats-the-difference-between-scss-and-sass) 『stackoverflow』
+- [http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax) 『Sass 文档』
+- [https://sass-lang.com/documentation/file.INDENTED_SYNTAX.html#Sass_Syntax_Differences](https://sass-lang.com/documentation/file.INDENTED_SYNTAX.html#Sass_Syntax_Differences)『Sass 文档——缩进语法』
+- [https://marksheet.io/sass-scss-less.html](https://marksheet.io/sass-scss-less.html)『MarkSheet』
 
 ## 语法篇『搞懂明白』
 
