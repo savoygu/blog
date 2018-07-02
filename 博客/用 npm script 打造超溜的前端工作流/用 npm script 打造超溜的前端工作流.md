@@ -647,15 +647,15 @@ done
 ```bash
 for file in client/scripts/*.js
 do
-	./node_modules/uglify-es/bin/uglifyjs $file --mangle > dist/scripts/${basename $file}
+	./node_modules/uglify-es/bin/uglifyjs $file --mangle > dist/scripts/$(basename $file)
 done
 ```
 
 #### 4.4 资源版本号和引用替换
 
-给静态资源加版本号的原因是线上环境的静态资源通常都放在 CDN 上，或者设置了很长时间的缓存，或者两者兼有，如果资源更新了但没有更新版本号，浏览器端是拿不到最新内容的，手动加版本号的过程很繁琐并且容易出错，为此自动化这个过程就显得非常有价值，通常的做法是利用文件内容做哈希，比如 md5，然后以这个哈希值作为版本号，版本号附着在文件名里面，线上环境的资源引用全部是带版本号的。
+给静态资源加版本号的原因是线上环境的静态资源通常都放在 CDN 上，或者设置了很长时间的缓存，或者两者兼有，如果资源更新了但没有更新版本号，浏览器端是拿不到最新内容的，手动加版本号的过程很繁琐并且容易出错，为此自动化这个过程就显得非常有价值，通常的做法是利用文件内容做哈希，比如 md5，然后以这个哈希值作为版本号，版本号附着在文件名里面，线上环境的资源引用全部是带版本号的。
 
-为了实现这个过程，我们需要引入两个小工具：
+为了实现这个过程，我们需要引入两个小工具：
 
 - [hashmark](https://github.com/keithamus/hashmark)，自动添加版本号；
 - [replaceinfiles](https://github.com/songkick/replaceinfiles)，自动完成引用替换，它需要家版本号过程的输出作为输入；
