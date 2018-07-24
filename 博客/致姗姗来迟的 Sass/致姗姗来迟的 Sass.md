@@ -9,7 +9,7 @@ Sass VS SCSS
 - 一种是『Sass』(Syntactically Awesome StyleSheets 的简称)，使用[缩进语法](https://sass-lang.com/documentation/file.INDENTED_SYNTAX.html#Sass_Syntax_Differences)；
 - 一种是『SCSS』(Sassy CSS 的简称)，使用基于CSS的语法。
 
-### 一、优劣
+### 一、优劣
 
 『Sass』
 
