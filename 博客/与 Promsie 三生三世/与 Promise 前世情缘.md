@@ -1,6 +1,6 @@
 # 与 Promise 前世情缘
 
-> 参考：[JavaScript Promise迷你书](http://liubin.org/promises-book/#race-delay-timeout)
+> 参考：[JavaScript Promise 迷你书](http://liubin.org/promises-book/#race-delay-timeout)
 
 阅读本文你能获得什么：
 
@@ -12,7 +12,7 @@
 
 ### Promise 概念
 
-> Promise 是抽象异步处理对象以及对其进行各种操作的组件。——JavaScript Promise迷你书（中文版）
+> Promise 是抽象异步处理对象以及对其进行各种操作的组件。——JavaScript Promise 迷你书（中文版）
 >
 > Promise 对象用于一个异步操作的最终完成 fulfilled（或失败 rejected）及其结果的表示。（简单点说就是处理异步请求）—— MDN Promise
 
@@ -21,6 +21,7 @@
 ### Promise 工作流
 
 ```bash
+
 ```
 
 ### Promise 状态
@@ -41,9 +42,9 @@ reject(失败)时。此时会调用 `onRejected`
 
 **说明：** 关于上面三种状态的读法，左侧为 ES6 Promise 规范中定义的术语，右侧是 Promises/A+ 中描述状态的术语。
 
-![Promise 三种状态](前世情缘/promise-states.png)
+![Promise 三种状态](前世情缘/images/promise-states.png)
 
-## Promise 编程API
+## Promise 编程 API
 
 ## Promise 优劣分析
 
