@@ -1,0 +1,98 @@
+/* Line 2338 of global.css */
+.feedback, .confirm,
+.positive,
+.notice, .warning,
+.warningPersistant, .error, .info {
+  color: #333;
+  padding: 0.7em 5em 0.7em 4.3em;
+  margin: 1.2em 0 1em 0 !important;
+  clear: left;
+}
+
+.confirm,
+.positive,
+.notice {
+  background: #eff6e8 url(/img/circle-check-green.gif) 1.3em 0.5em no-repeat;
+  border-top: 1px solid #A5CC7A;
+  border-bottom: 1px solid #A5CC7A;
+}
+
+.warning,
+.warningPersistant {
+  background: #fff url(/img/circle-yellow-exclamation.gif) 1.3em 0.5em no-repeat;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.error {
+  background: #fff url(/img/circle-red-exclamation.gif) 1.3em 0.5em no-repeat;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.info {
+  background: #fff url(/img/circle-yellow-info.gif) 1.3em 0.5em no-repeat;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.feedback div, .confirm div, .positive div, .notice div, .warning div, .warningPersistant div, .error div, .info div {
+  display: inline;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feedback p, .confirm p, .positive p, .notice p, .warning p, .warningPersistant p, .error p, .info p {
+  margin: 0;
+}
+
+.feedback h3, .confirm h3, .positive h3, .notice h3, .warning h3, .warningPersistant h3, .error h3, .info h3, .feedback strong, .confirm strong, .positive strong, .notice strong, .warning strong, .warningPersistant strong, .error strong, .info strong {
+  font-weight: bold !important;
+  letter-spacing: normal !important;
+  font-size: 1.2em !important;
+  padding: 0 0.5em 0 0 !important;
+  margin: 0 !important;
+  display: inline;
+}
+
+.positive h3,
+.confirm h3, .positive strong,
+.confirm strong {
+  color: #e18015;
+}
+
+.warning h3,
+.warningPersistant h3, .warning strong,
+.warningPersistant strong {
+  color: #b50b05;
+}
+
+.error h3, .error strong {
+  color: #b50b05;
+}
+
+.confirm:hover {
+  color: #030;
+}
+
+h2 .confirm {
+  font-size: 50%;
+  float: right;
+}
+
+.instruction {
+  background: #EAF2FA url(/img/feature-box.gif) 0 0 no-repeat;
+  margin-bottom: 1em;
+  color: #6C7D8E;
+}
+
+.instruction div {
+  background: url(/img/feature-box.gif) 100% 100% no-repeat;
+  padding: 15px 15px 10px 15px;
+}
+
+.instruction h3 {
+  color: #6C7D8E;
+}
+/*# sourceMappingURL=global.css.map */

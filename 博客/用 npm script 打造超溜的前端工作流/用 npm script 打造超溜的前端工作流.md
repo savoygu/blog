@@ -24,7 +24,7 @@ npm config set init.license "MIT"
 npm config set init.version "0.1.0"
 ```
 
-如果想跳过询问直接生成 package.json 文件的话，可以加上 `-f|-y` 参数：
+如果想跳过询问直接生成 package.json 文件的话，可以加上 `-f|-y` 参数：
 
 ```bash
 npm init [-f|--force|-y|--yes]
