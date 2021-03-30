@@ -1,4 +1,4 @@
-## 实现 call
+## 实现 bind
 
 ### 实现要点
 
@@ -30,7 +30,7 @@ Function.prototype.bind3 = Function.prototype.bind || function (that) {
   }
 
   if(target.prototype){
-    const Empty = function() {}
+    var Empty = function() {}
     Empty.prototype = target.prototype;
     bound.prototype = new Empty();
     Empty.prototype = null
