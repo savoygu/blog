@@ -1,8 +1,6 @@
-# 欢迎来到我的博客
+# 新的征程 — 面试篇
 
-> 记录美好时光，留下一缕芳香
-
-如果你对文章有疑问、文章中出现错误，请在 Issues 中提出（每篇文章已经建好对应的 Issue）。
+> 接下来的半个月时间里，会陆续添加前端相关的知识，为面试做准备！
 
 ## 面试
 
@@ -14,27 +12,27 @@
 
       1.2 [:tada:] [new](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/new.md)
 
-      1.3 [:tada:] [call](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/call.md)
+      1.3 [:tada:] [apply](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/apply.md)
 
-      1.4 [:tada:] [apply](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/apply.md)
+      1.4 [:tada:] [call](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/call.md)
 
-      1.5 [:construction:] [bind]()
+      1.5 [:tada:] [bind](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/bind.md)
 
-      1.6 [:construction:] [throttle]()
+      1.6 [:construction:] [throttle](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/throttle.md)
 
-      1.7 [:construction:] [debounce]()
+      1.7 [:construction:] [debounce](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/debounce.md)
 
-      1.8 [:construction:] [Promise]()
+      1.8 [:construction:] [Promise](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/Promise.md)
 
-      1.9 [:construction:] [调度器]()
+      1.9 [:construction:] [调度器](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/Scheduler.md)
 
-      1.10 [:construction:] [deepClone]()
+      1.10 [:construction:] [deepClone](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/deepClone.md)
 
-      1.11 [:construction:] [EventEmitter]()
+      1.11 [:construction:] [EventEmitter](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/EventEmitter.md)
 
-      1.12 [:construction:] [Ajax]()
+      1.12 [:construction:] [Ajax](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/Ajax.md)
 
-      1.13 [:construction:] [jsonp]()
+      1.13 [:construction:] [jsonp](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/jsonp.md)
 
   2. [:construction:] 深入原理
     

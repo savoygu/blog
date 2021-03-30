@@ -2,7 +2,7 @@
 
 ### 代码实现
 
-**提示**：原生带 `call` 与 `apply` 只有在参数处理方面有差异，因此这里直接调用了 [apply](./apply.md) 的实现
+**提示**：原生的 `call` 与 `apply` 只有在参数处理方面有差异，因此这里直接调用了 [apply](./apply.md) 的实现
 
 ```javascript
 Function.prototype.call3 = Function.prototype.call || function (that) {
