@@ -8,35 +8,35 @@
 
 ### JavaScript 篇
 
-  1. [:construction:] [手写系列]()
+  1. [:construction:] 手写系列
 
-      1.1 [instanceof]()
+      1.1 [:tada:] [instanceof](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/instanceof.md)
 
-      1.2 [new]()
+      1.2 [:tada:] [new](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/new.md)
 
-      1.3 [call]()
+      1.3 [:tada:] [call](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/call.md)
 
-      1.4 [apply]()
+      1.4 [:tada:] [apply](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/apply.md)
 
-      1.5 [bind]()
+      1.5 [:construction:] [bind]()
 
-      1.6 [throttle]()
+      1.6 [:construction:] [throttle]()
 
-      1.7 [debounce]()
+      1.7 [:construction:] [debounce]()
 
-      1.8 [Promise]()
+      1.8 [:construction:] [Promise]()
 
-      1.9 [调度器]()
+      1.9 [:construction:] [调度器]()
 
-      1.10 [deepClone]()
+      1.10 [:construction:] [deepClone]()
 
-      1.11 [EventEmitter]()
+      1.11 [:construction:] [EventEmitter]()
 
-      1.12 [Ajax]()
+      1.12 [:construction:] [Ajax]()
 
-      1.13 [jsonp]()
+      1.13 [:construction:] [jsonp]()
 
-  2. [:construction:] [深入原理]()
+  2. [:construction:] 深入原理
     
       2.1 [:construction:] [变量声明提升]()
 
