@@ -2,15 +2,15 @@
 
 ### 实现要点
 
-  1. 属性同名覆盖
+1. 属性同名覆盖
+  
+   - ES5 随机数 + 缓存原始值
+   - ES6 `Symbol`
 
-     - ES5 随机数 + 缓存原始值
-     - ES6 `Symbol`
+2. 参数传递
 
-  2. 参数传递
-
-     - ES5 `new Function`
-     - ES6 扩展运算符 (`...`)
+    - ES5 `new Function`
+    - ES6 扩展运算符 (`...`)
 
 **注意**：ES5 参数传递 使用了 `new Function` 而不是 `eval` ，是因为面试官或许会要求不使用 eval 如何实现?!
 
@@ -22,7 +22,7 @@ ES5
 
 ```javascript
 Function.prototype.apply3 = Function.prototype.apply || function (that, args) {
-  const target = this
+  var target = this
   if (typeof target !== 'function') {
     throw new TypeError('Function.prototype.apply3 called on incompatible ' + target)
   }
@@ -42,16 +42,16 @@ Function.prototype.apply3 = Function.prototype.apply || function (that, args) {
   that = new Object(that)
 
   // 与 ES6 不同的实现
-  const fn = '$' + +new Date()
-  const originalVal = that[fn]
-  const hasOriginalVal = that.hasOwnProperty(fn)
+  var fn = '$' + +new Date()
+  var originalVal = that[fn]
+  var hasOriginalVal = that.hasOwnProperty(fn)
   that[fn] = target
-  const argsLength = args.length
-  const spreadArgs = new Array(argsLength)
+  var argsLength = args.length
+  var spreadArgs = new Array(argsLength)
   for (let i = 0; i < argsLength; i++) {
     spreadArgs[i] = 'args[' + i + ']'
   }
-  const result = Function('obj', 'fn', 'args', 'return obj[fn](' + spreadArgs.join(',') + ')')(that, fn, args)
+  var result = Function('obj', 'fn', 'args', 'return obj[fn](' + spreadArgs.join(',') + ')')(that, fn, args)
   delete that[fn]
   if (hasOriginalVal) {
     that[fn] = originalVal
