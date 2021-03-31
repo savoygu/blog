@@ -6,51 +6,51 @@
 
 ### JavaScript 篇
 
-  1. [:construction:] 手写系列
+  1. :construction: 手写系列
 
-      1.1 [:tada:] [instanceof](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/instanceof.md)
+      1.1 :tada: [instanceof](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/instanceof.md)
 
-      1.2 [:tada:] [new](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/new.md)
+      1.2 :tada: [new](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/new.md)
 
-      1.3 [:tada:] [apply](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/apply.md)
+      1.3 :tada: [apply](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/apply.md)
 
-      1.4 [:tada:] [call](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/call.md)
+      1.4 :tada: [call](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/call.md)
 
-      1.5 [:tada:] [bind](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/bind.md)
+      1.5 :tada: [bind](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/bind.md)
 
-      1.6 [:tada:] [throttle](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/throttle.md)
+      1.6 :tada: [throttle](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/throttle.md)
 
-      1.7 [:construction:] [debounce](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/debounce.md)
+      1.7 :tada: [debounce](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/debounce.md)
 
-      1.8 [:construction:] [Promise](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/Promise.md)
+      1.8 :construction: [Promise](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/Promise.md)
 
-      1.9 [:construction:] [调度器](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/Scheduler.md)
+      1.9 :construction: [调度器](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/Scheduler.md)
 
-      1.10 [:construction:] [deepClone](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/deepClone.md)
+      1.10 :construction: [deepClone](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/deepClone.md)
 
-      1.11 [:construction:] [EventEmitter](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/EventEmitter.md)
+      1.11 :construction: [EventEmitter](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/EventEmitter.md)
 
-      1.12 [:construction:] [Ajax](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/Ajax.md)
+      1.12 :construction: [Ajax](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/Ajax.md)
 
-      1.13 [:construction:] [jsonp](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/jsonp.md)
+      1.13 :construction: [jsonp](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/jsonp.md)
 
-  2. [:construction:] 深入原理
+  2. :construction: 深入原理
     
-      2.1 [:construction:] [变量声明提升]()
+      2.1 :construction: [变量声明提升]()
 
-      2.2 [:construction:] [this 指向]()
+      2.2 :construction: [this 指向]()
 
-      2.3 [:construction:] [原型与原型链]()
+      2.3 :construction: [原型与原型链]()
 
-      2.4 [:construction:] [执行上下文]()
+      2.4 :construction: [执行上下文]()
 
-      2.5 [:construction:] [上下文与作用域]()
+      2.5 :construction: [上下文与作用域]()
 
-      2.6 [:construction:] [闭包]()
+      2.6 :construction: [闭包]()
 
-      2.7 [:construction:] [事件循环]()
+      2.7 :construction: [事件循环]()
       
-  3. [:construction:] [DOM 相关]()
+  3. :construction: [DOM 相关]()
 
 ## 博客
 
