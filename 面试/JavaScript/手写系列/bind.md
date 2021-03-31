@@ -8,7 +8,7 @@
 
 ### 代码实现
 
-ES5
+#### 👩‍💻👨‍💻 ES5
 
 ```javascript
 Function.prototype.bind3 = Function.prototype.bind || function (that) {
@@ -40,7 +40,7 @@ Function.prototype.bind3 = Function.prototype.bind || function (that) {
 }
 ```
 
-ES6
+#### 👩‍💻👨‍💻 ES6
 
 ```javascript
 Function.prototype.bind3 = Function.prototype.bind || function (that) {
@@ -65,7 +65,7 @@ Function.prototype.bind3 = Function.prototype.bind || function (that) {
 }
 ```
 
-es5-shim
+#### 👩‍💻👨‍💻 es5-shim
 
 - 相对于其他版本，实现了形参长度
 

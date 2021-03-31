@@ -8,7 +8,7 @@
 
 ### 代码实现
 
-#### 定时器
+#### 👩‍💻👨‍💻 定时器
 
 **理解点**: 一旦生成定时器，只有等 `wait` 毫秒，当定时器执行后(`timer` 没了，`func` 函数也被执行了)，才能重新去生成定时器...
 
@@ -31,7 +31,7 @@ function throttle(func, wait) {
 }
 ```
 
-#### 时间戳
+#### 👩‍💻👨‍💻 时间戳
 
 **理解点**：记录上次执行时间，如果当前时间与上次时间的间隔大于 `wait`，就会执行 `func`，同时更新上次时间为当前时间。
 
@@ -58,7 +58,7 @@ function throttle(func, wait) {
 - 时间戳在事件触发时会让 func 先执行一次 (初始 last 为 0，必有 `now - last > wait`)，而定时器需要等 `wait` 毫秒
 - 定时器在事件停止触发后会再执行一次 (产生了一个 timer)，而时间戳不满足 `now - last > wait`
 
-#### 时间戳与定时器结合(有头有尾)
+#### 👩‍💻👨‍💻 时间戳与定时器结合(有头有尾)
 
 **提示**: 有头有尾指的是，鼠标移入能立刻执行，事件停止触发的时候还能再执行一次！
 
@@ -97,7 +97,7 @@ function throttle(func, wait) {
 }
 ```
 
-#### 时间戳与定时器结合(可控的有头有尾)
+#### 👩‍💻👨‍💻 时间戳与定时器结合(可控的有头有尾)
 
 ```javascript
 /**
@@ -148,7 +148,7 @@ function throttle(func, wait, options = {}) {
 
 **注意**: `leading：false` 和 `trailing: false` 不能同时设置
 
-如果同时设置的话，事件触发的时候，因为 `trailing` 设置为 `false`(定时器无法被触发)，所以只要再过了设置的时间 `wait`，再重新触发事件的话，就会立刻执行(因为 `last` 不是 `0` 了，无法满足 `!last && options.leading === false`， 导致 `remaining <= 0`，会在事件触发时立即进行第一次执行)，就违反了 `leading: false`，与设置的 options 参数相牟盾，因此，这个 throttle 只有三种用法：
+如果同时设置的话，事件触发的时候，因为 `trailing` 设置为 `false`(定时器无法被触发)，所以只要再过了设置的时间 `wait`，再重新触发事件的话，就会立刻执行(因为 `last` 不是 `0` 了，无法满足 `!last && options.leading === false`， 导致 `remaining <= 0`，会在事件触发时立即进行第一次执行)，就违反了 `leading: false`，与设置的 options 参数相矛盾，因此，这个 throttle 只有三种用法：
 
 ```javascript
 // 第一种: 有头有尾

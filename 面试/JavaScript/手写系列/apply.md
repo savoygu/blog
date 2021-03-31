@@ -18,7 +18,7 @@
 
 **提示**: ES5 和 ES6 代码对参数的处理是一致的
 
-ES5 
+#### 👩‍💻👨‍💻 ES5 
 
 ```javascript
 Function.prototype.apply3 = Function.prototype.apply || function (that, args) {
@@ -60,7 +60,7 @@ Function.prototype.apply3 = Function.prototype.apply || function (that, args) {
 }
 ```
 
-ES6
+#### 👩‍💻👨‍💻 ES6
 
 ```javascript
 Function.prototype.apply3 = Function.prototype.apply || function (that, args) {

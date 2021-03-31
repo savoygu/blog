@@ -18,7 +18,7 @@
 
       1.5 [:tada:] [bind](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/bind.md)
 
-      1.6 [:construction:] [throttle](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/throttle.md)
+      1.6 [:tada:] [throttle](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/throttle.md)
 
       1.7 [:construction:] [debounce](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/debounce.md)
 
