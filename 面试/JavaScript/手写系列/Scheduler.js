@@ -1,10 +1,3 @@
-## 实现调度器 Scheduler
-
-[Scheduler](./Scheduler.js) 源码
-
-### 代码实现
-
-```javascript
 class Scheduler {
   constructor() {
     this.task = []
@@ -30,8 +23,5 @@ class Scheduler {
     }
   }
 }
-```
 
-### 参考：  
-
-- []()
+module.exports = Scheduler
