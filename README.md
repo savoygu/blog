@@ -22,7 +22,7 @@
 
       1.7 :tada: [debounce](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/debounce.md)
 
-      1.8 :construction: [Promise](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/Promise.md)
+      1.8 :tada: [Promise](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/Promise.md)
 
       1.9 :construction: [调度器](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/Scheduler.md)
 
