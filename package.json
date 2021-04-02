@@ -33,6 +33,7 @@
     "estraverse": "^4.2.0"
   },
   "dependencies": {
+    "@koa/cors": "^3.1.0",
     "koa": "^2.13.1"
   }
 }

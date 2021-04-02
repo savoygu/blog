@@ -1,8 +1,3 @@
-## 实现 Ajax 
-
-### 代码实现
-
-```javascript
 function ajax({
   url = '',
   type = "GET",
@@ -43,7 +38,7 @@ function ajax({
         success && success(response)
       } else {
         // 失败回调函数
-        error && error(status)
+        success && success(status)
       }
     }
   }
@@ -51,8 +46,7 @@ function ajax({
   // 连接和传输数据
   if (type === 'GET') {
     // open 三个参数分别是：请求方式、请求地址、是否异步请求
-    const symbol = url.indexOf('?') > -1 ? '&' : '?' // 判断 url 有没有 ?, 有的话就用 & 连接 data
-    xhr.open(type,  url + symbol + dataStr, true)
+    xhr.open(type,  url + '?' + dataStr, true)
     xhr.send(null)
   } else {
     xhr.open(type,  url, true)
@@ -61,9 +55,13 @@ function ajax({
     xhr.send(data) // 传输数据
   }
 }
-```
 
-### 参考：  
-
-- [原生 JavaScript 实现 AJAX、JSONP — 铁锅](https://juejin.cn/post/6844903462551945230)
- 
+ajax({
+  url: 'http://localhost:8080/api/ajax',
+  data: {
+    id: 1
+  },
+  success: function (response) {
+    console.log(response, typeof response)
+  }
+})
