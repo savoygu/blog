@@ -31,5 +31,8 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "estraverse": "^4.2.0"
+  },
+  "dependencies": {
+    "koa": "^2.13.1"
   }
 }
