@@ -6,7 +6,7 @@
 
 ### JavaScript 篇
 
-  1. :construction: 手写系列
+  1. :tada: 手写系列
 
       1.1 :tada: [instanceof](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/instanceof.md)
 
@@ -36,7 +36,7 @@
 
   2. :construction: 深入原理
     
-      2.1 :construction: [变量声明提升]()
+      2.1 :tada: [变量声明提升](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%B7%B1%E5%85%A5%E5%8E%9F%E7%90%86/%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87.md)
 
       2.2 :construction: [this 指向]()
 
