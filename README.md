@@ -38,7 +38,7 @@
     
       2.1 :tada: [变量声明提升](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%B7%B1%E5%85%A5%E5%8E%9F%E7%90%86/%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87.md)
 
-      2.2 :construction: [this 指向]()
+      2.2 :tada: [this 指向](https://github.com/savoygu/blog/blob/this/%E9%9D%A2%E8%AF%95/JavaScript/%E6%B7%B1%E5%85%A5%E5%8E%9F%E7%90%86/this%E6%8C%87%E5%90%91.md)
 
       2.3 :construction: [原型与原型链]()
 
