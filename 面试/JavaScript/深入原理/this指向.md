@@ -303,6 +303,38 @@ for(var i=0 ; i<elements.length ; i++){
 
 ### this 的设计缺陷及其应对方案
 
+:one: 嵌套函数中的 this 不会从外层函数中继承
+
+```javascript
+var obj = {
+  name: 'Mike',
+  foo: function () {
+    console.log(this)
+    
+    function bar() {
+      console.log(this)
+    }
+    bar() 
+  }
+}
+
+obj.foo() // 依次输出  obj、window
+```
+
+上面代码中，`foo` 函数内部的 `bar` 函数中的 `this` 指向的是全局对象 `window`，而 `foo` 函数中的 `this` 指向的是 `obj` 对象。
+
+应对方案：
+
+1.  在 foo 函数中声明一个变量 that 来保存 this，然后在 bar 函数中使用 that(其本质是 把 this 体系转换为了作用域的体系)  
+2. 使用 ES6 中的箭头函数来创建 bar 函数(ES6 中的箭头函数并不会创建其自身的执行上下文，所以箭头函数中的 this 取决于它的外部函数)
+
+:two: 普通函数中的 this 默认指向全局对象 window
+
+在默认情况下调用一个函数，其执行上下文中的 this 是默认指向全局对象 window 的。
+
+如果要让函数执行上下文中的 this 指向某个对象，最好的方式是通过 call、apply 方法来显式调用。
+
+这个问题可以通过为函数设置 JavaScript 的 “严格模式“来解决。因为在严格模式下，默认执行一个函数，其函数的执行上下文中的 this 值是 undefined。
 
 ### 参考
 
@@ -310,3 +342,4 @@ for(var i=0 ; i<elements.length ; i++){
 - [箭头函数 — MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 - [this指向问题 — 前端橘子君](https://juejin.cn/post/6894163510088744973)
 - [JS执行机制](https://zhuanlan.zhihu.com/p/151033665)
+- [【学习总结】new一个对象的过程发生了什么，JS中this设计的缺陷以及应对方案](https://blog.csdn.net/qq_42872073/article/details/110670858)
