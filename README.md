@@ -46,11 +46,11 @@
 
       2.5 :tada: [执行上下文](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%B7%B1%E5%85%A5%E5%8E%9F%E7%90%86/%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87.md)
 
-      2.6 :construction: [作用域与作用域链](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%B7%B1%E5%85%A5%E5%8E%9F%E7%90%86/%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE.md)
+      2.6 :tada: [作用域与作用域链](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%B7%B1%E5%85%A5%E5%8E%9F%E7%90%86/%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE.md)
 
-      2.7 :construction: [上下文与作用域](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%B7%B1%E5%85%A5%E5%8E%9F%E7%90%86/%E4%B8%8A%E4%B8%8B%E6%96%87%E4%B8%8E%E4%BD%9C%E7%94%A8%E5%9F%9F.md)
+      2.7 :tada: [上下文与作用域](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%B7%B1%E5%85%A5%E5%8E%9F%E7%90%86/%E4%B8%8A%E4%B8%8B%E6%96%87%E4%B8%8E%E4%BD%9C%E7%94%A8%E5%9F%9F.md)
 
-      2.8 :construction: [闭包](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%B7%B1%E5%85%A5%E5%8E%9F%E7%90%86/%E9%97%AD%E5%8C%85.md)
+      2.8 :tada: [闭包](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%B7%B1%E5%85%A5%E5%8E%9F%E7%90%86/%E9%97%AD%E5%8C%85.md)
 
       2.9 :construction: [事件循环](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%B7%B1%E5%85%A5%E5%8E%9F%E7%90%86/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF.md)
       
