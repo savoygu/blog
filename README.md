@@ -117,7 +117,7 @@
 
 ### 常用库篇
 
-- Axios
+- Axios (v0.21.1)
 
   :construction: [源码赏析]()
 
