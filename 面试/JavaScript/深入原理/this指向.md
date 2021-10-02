@@ -147,7 +147,7 @@ console.log(adder.addThruCall(1)); // 仍然输出 2，说明 箭头函数的 ca
 ```
 
 :star: **不绑定`arguments`**:
-> 箭头函数不绑定`Arguments` 对象。因此，在本示例中，`arguments`只是引用了封闭作用域内的`arguments`：
+> 箭头函数不绑定 `arguments` 对象。因此，在本示例中，`arguments` 只是引用了封闭作用域内的 `arguments`：
 
 ```javascript
 var arguments = [1, 2, 3];

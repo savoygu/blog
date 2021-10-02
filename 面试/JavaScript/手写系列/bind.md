@@ -80,11 +80,11 @@ Function.prototype.bind3 = Function.prototype.bind || function(that) {
   let bound
   const binder = function() { // 要点 1
     // this instanceof bound 不是很准确，可以使用 ES6 new.target
-		if (this instanceof bound) { // typeof new.target !== 'undefined'
+    if (this instanceof bound) { // typeof new.target !== 'undefined'
       const result = target.apply(this, args.concat([].slice.call(arguments)))
       if (Object(result) === result) {
-//       if (result !== null && typeof result === 'object' 
-//         || typeof result === 'function')
+      // if (result !== null && typeof result === 'object' 
+      //   || typeof result === 'function')
         return result
       }
       return this
@@ -118,8 +118,8 @@ Function.prototype.bind3 = Function.prototype.bind || function(that) {
 if (this instanceof bound) { // typeof new.target !== 'undefined'
   const result = target.apply(this, args.concat([].slice.call(arguments)))
   if (Object(result) === result) {
-//       if (result !== null && typeof result === 'object' 
-//         || typeof result === 'function')
+  // if (result !== null && typeof result === 'object' 
+  //   || typeof result === 'function')
     return result
   }
   return this

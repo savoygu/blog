@@ -17,7 +17,7 @@ class EventEmitter {
    * @param {String} event 事件名
    * @param {Function} listener 事件处理函数
    */
-  on(event, listener) {
+  on(event, listener) { // { before: listener, after: listener }
     const listeners = this.listeners
     if (!listeners.has(event)) {
       listeners.set(event, [])
