@@ -1,6 +1,5 @@
 // 完整版
-
-
+/* eslint-disable-next-line */
 class EventEmitter {
   constructor() {
     this._listeners = new Map()
@@ -11,7 +10,10 @@ class EventEmitter {
   on(event, listener) {
     const handlers = this._listeners.get(event)
     if (handlers && handlers.length > this.maxListener) {
-      throw console.error('监听器的最大数量是%d, 您已超出限制!', this.maxListener)
+      throw console.error(
+        '监听器的最大数量是%d, 您已超出限制!',
+        this.maxListener
+      )
     }
 
     const added = handlers && handlers.push(listener)
@@ -22,7 +24,9 @@ class EventEmitter {
 
   // 按监听器的顺序执行执行每个监听器
   emit(event, ...args) {
-    ;(this._listeners.get(event) || []).forEach(handler => handler(null, args))
+    (this._listeners.get(event) || []).forEach((handler) =>
+      handler(null, args)
+    )
   }
 
   // on的同名函数（alias）
@@ -33,14 +37,14 @@ class EventEmitter {
   // 和on类似，但只触发一次，随后便解除事件监听
   once(event, listener) {
     const that = this
-    function handler (...args) {
+    function handler(...args) {
       listener.apply(null, args)
       that.removeListener(event, handler)
     }
-    
+
     this.on(event, handler)
   }
-  
+
   // 移除指定事件的某个监听回调
   removeListener(event, listener) {
     const handlers = this._listeners.get(event)
@@ -89,7 +93,7 @@ class EventEmitter {
 //    * 按监听器的顺序执行执行每个监听器
 //    * @param {String} event 事件名
 //    * @param  {...any} args 参数列表
-//    * @returns 
+//    * @returns
 //    */
 //   emit(event, ...args) {
 //     const listeners = this.listeners
@@ -105,7 +109,7 @@ class EventEmitter {
 //    *  移除指定事件的某个监听回调
 //    * @param {String} event 事件名
 //    * @param {Function} listener 事件处理函数
-//    * @returns 
+//    * @returns
 //    */
 //   off(event, listener) {
 //     const listeners = this.listeners

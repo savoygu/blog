@@ -1,18 +1,18 @@
 class Scheduler {
-  constructor() {
+  constructor () {
     this.task = []
     this.curringRuning = 0
   }
 
-  add(promiseCreator) {
-    return new Promise((resolve, reject) => {
+  add (promiseCreator) {
+    return new Promise((resolve) => {
       this.task.push(() => promiseCreator().then(() => resolve()))
       // 控制最多执行两个
       if (this.curringRuning < 2) this.doTask()
     })
   }
 
-  doTask() {
+  doTask () {
     if (this.task.length > 0) {
       const runTask = this.task.shift()
       this.curringRuning++

@@ -78,7 +78,7 @@ _typeof({})// —>   'object'
 _typeof(true)//  —>   'boolean'
 _typeof(1)//  —>   'number'
 _typeof('a')//  —>   'string'
-_typeof(null)//  —>   'array'
+_typeof(null)//  —>   'null'
 _typeof(undefined)//  —>   'undefined'
 ```
 

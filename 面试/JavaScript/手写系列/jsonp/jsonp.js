@@ -1,15 +1,15 @@
 // 支持多个请求
 function jsonp ({
-  url, 
-  params = {}, 
+  url,
+  params = {},
   callbackKey = 'jsonCallback',
-  callback = () => {}, 
+  callback = () => {}
 }) {
   const cid = jsonp.cid = (jsonp.cid || 0)
 
   jsonp.cbs = jsonp.cbs || []
   jsonp.cbs[cid] = callback
-  
+
   params[callbackKey] = `jsonp.cbs[${cid}]`
 
   const paramsStr = Object.keys(params).reduce((res, key, i, data) => {
@@ -27,12 +27,12 @@ function jsonp ({
 jsonp({
   url: 'http://localhost:8080/api/jsonps',
   params: {
-      a: '2&b=3',
-      b: '4'
+    a: '2&b=3',
+    b: '4'
   },
   // callbackKey: 'cb',
   callback (res) {
-      console.log(res)
+    console.log(res)
   }
 })
 
@@ -57,7 +57,6 @@ jsonp({
 //   script.setAttribute('src', `${url}?${paramsStr}`)
 //   document.body.appendChild(script)
 // }
-
 
 // jsonp({
 //   url: 'http://localhost:8080/api/jsonp',
