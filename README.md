@@ -3,7 +3,7 @@
 > 前一段时间辞职了，面了大约 35 家公司，前前后后持续了 1 个月。大部分都是视频远程的形式，多的时候一天排了 6 家面试，其实这次面试是漫无目的的，大大小小的公司也是来者不拒，一开始是为了积攒点面试经验，后面也逐渐麻木了。因为涨薪幅度比较大(年150%)，能给到 offer 的公司并不多，不少家到了最终面，没了下文。在收到 2 家比较满意的 offer 后，结束了面试之旅。
 >
 > 这里呢，会不断整理出我在面试中遇到的问题、面试中可能遇到的问题，与大家分享，并尽可能给出详细解释，当然了如果你有更好的解答也可以参与进来，愿景是打造一份对标大厂 P6/P7 的面试指南。
-> 
+>
 > 面试不是目的，成长才是！希望大家在找到工作的同时，也能有所提升，一起加油，共勉！
 
 ## 面试
@@ -16,7 +16,7 @@
 
   2. :construction: [制作布局]()
 
-      > 涉及：定位(position)、盒模型、弹性布局(flex)、网格布局(grid)
+      > 要点：定位(position)、盒模型、弹性布局(flex)、网格布局(grid)
 
   3. :construction: [双栏布局、三栏布局]()
 
@@ -51,7 +51,7 @@
       1.13 :tada: [jsonp](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%89%8B%E5%86%99%E7%B3%BB%E5%88%97/jsonp.md)
 
   2. :construction: 深入原理
-    
+
       2.1 :tada: [变量声明提升](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%B7%B1%E5%85%A5%E5%8E%9F%E7%90%86/%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87.md)
 
       2.2 :tada: [this 指向](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%B7%B1%E5%85%A5%E5%8E%9F%E7%90%86/this%E6%8C%87%E5%90%91.md)
@@ -69,110 +69,162 @@
       2.8 :tada: [闭包](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%B7%B1%E5%85%A5%E5%8E%9F%E7%90%86/%E9%97%AD%E5%8C%85.md)
 
       2.9 :tada: [事件循环](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/JavaScript/%E6%B7%B1%E5%85%A5%E5%8E%9F%E7%90%86/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF.md)
-      
+
   3. :construction: [DOM 相关]()
 
-### 网络篇
+      - :construction: [DOM Api]()
 
-- :contruction: [HTTP]()
+      - :construction: [事件委托]()
+
+      - :construction: [事件冒泡、事件捕获]()
 
 ### 浏览器篇
 
-- :construction: [重绘/回流]()
-- :construction: [渲染机制]()
-- :construction: [跨域]()
-- :construction: [Cookie]()
-- :construction: [本地存储]()
-- :construction: [从输入 URL 到页面呈现发生了什么]()
+  - :construction: [重绘/回流]()
 
-### 前端安全篇
+  - :construction: [渲染机制]()
 
-- :construction: [CSRF]()
+  - :construction: [跨域]()
 
-- :construction: [XSS]()
+  - :construction: [Cookie]()
 
-### 工程化篇
+  - :construction: [本地存储]()
 
-- Webpack
-
-  :construction: [构建流程]()
-
-  :construction: [高级配置]()
-
-  :construction: [性能优化]()
-
-  :construction: [热更新原理]()
-
-- Babel
-
-- Vite
+  - :construction: [从输入 URL 到页面呈现发生了什么]()
 
 ### Vue 篇
 
-- Vue2
+  - Vue2
 
-  :construction: [双向数据绑定绑定流程]()
+    :construction: :star::star::star: [组件通信的方式]()
 
-  :construction: [v-model 原理]()
-  
-  :construction: [源码赏析]()
+    :construction: :star::star::star: [组件的生命周期]()
 
-- Vue Router
+    :construction: :star::star::star: [双向数据绑定流程]()
 
-  :construction: [源码赏析]()
+    :construction: :star::star::star: [v-model 原理]()
 
-- Vuex
+    :construction: :star::star::star: [key 的作用是什么?!]()
 
-  :construction: [源码赏析]()
+    :construction: :star: [diff 算法实现原理]()
 
-- Vue Cli
+    :construction: :star: [nextTick 实现原理]()
 
-  :construction: [源码赏析]()
+      > 要点：宏任务和微任务
 
-- Vue3
+    :construction: :star: [插槽实现原理]()
 
-  :construction: [源码赏析]()
+    :construction: [源码赏析]()
+
+  - Vue Router
+
+    - :construction: :star::star::star: [路由模式 hash 和 history 有何区别]()
+
+    - :construction: [导航守卫解析流程]()
+
+    - :construction: [keep-alive 实现原理]()
+
+    - :construction: [源码赏析]()
+
+    - 拓展
+
+      :construction: [如何用同步的方式实现异步?!]()
+
+  - Vuex
+
+    :construction: [源码赏析]()
+
+  - Vue Cli
+
+    :construction: [源码赏析]()
+
+  - Vue3
+
+    :construction: [源码赏析]()
+
+### 工程化篇
+
+  - :construction: [Webpack]()
+
+    - :construction: [构建流程]()
+
+    - :construction: [高级配置]()
+
+    - :construction: [性能优化]()
+
+    - :construction: [热更新原理]()
+
+  - :construction: [Babel]()
+
+  - :construction: [Vite]()
+
+### 性能优化篇
+
+  - :construction: [长列表虚拟滚动实现]()
+
+### 小程序篇
+
+  - :construction: [setData 原理]()
+
+  - :construction: [双线程模型]()
 
 ### 常用库篇
 
-- Axios
+  - Axios
 
-  :construction: [源码赏析]()
+    - :construction: [请求和响应拦截器实现原理]()
 
+    - :construction: [源码赏析]()
+
+### 网络篇
+
+  - :construction: [HTTP]()
+
+    > 要点：三次握手、四次挥手
+
+### 前端安全篇
+
+  - :construction: [CSRF]()
+
+  - :construction: [XSS]()
 
 ### 算法与数据结构篇
 
-- :construction: [排序算法]()
+  - :construction: [排序算法]()
 
-- :construction: [字符串]()
+    - :construction: [冒泡排序]()
 
-- :construction: [数组、链表]()
+    - :construction: [快速排序]()
 
-- :construction: [栈、队列]()
+  - :construction: [字符串]()
 
-- :construction: [树、二叉树、二叉搜索树]()
+  - :construction: [数组、链表]()
 
-- :construction: [堆、二叉堆、图]()
+  - :construction: [栈、队列]()
 
-- :construction: [哈希表、映射、集合]()
+  - :construction: [树、二叉树、二叉搜索树]()
 
-- :construction: [递归]()
+  - :construction: [堆、二叉堆、图]()
 
-- :construction: [分治、回溯]()
+  - :construction: [哈希表、映射、集合]()
 
-- :construction: [深度优先搜索(DFS)、广度优先搜索(BFS)]()
+  - :construction: [递归]()
 
-- :construction: [贪心]()
+  - :construction: [分治、回溯]()
 
-- :construction: [二分]()
+  - :construction: [深度优先搜索(DFS)、广度优先搜索(BFS)]()
 
-- :construction: [动态规划]()
+  - :construction: [贪心]()
 
-- :construction: [并查集]()
+  - :construction: [二分]()
 
-- :construction: [位运算]()
+  - :construction: [动态规划]()
 
-- :construction: [缓存(LRU、LFU)]()
+  - :construction: [并查集]()
+
+  - :construction: [位运算]()
+
+  - :construction: [缓存(LRU、LFU)]()
 
 ## 前端
 

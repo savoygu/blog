@@ -16,7 +16,7 @@ function _new(Ctor) {
     throw new TypeError(Ctor + ' is not a constructor')
   }
 
-  // es6 
+  // es6
   _new.target = Ctor
   const obj = Object.create(Ctor.prototype) // 步骤 1，2，4
   const args = [].slice(arguments, 1)
@@ -30,6 +30,6 @@ function _new(Ctor) {
 }
 ```
 
-### 参考：  
+### 参考：
 
 - [面试官问：能否模拟实现JS的new操作符 — 若川](https://juejin.cn/post/6844903704663949325)
