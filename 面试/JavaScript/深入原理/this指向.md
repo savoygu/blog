@@ -2,14 +2,14 @@
 
 ### 核心两要素
 
-- this 的指向不是在函数定义时确定的，而是在函数调用时确定
-- this 默认情况下指向 window，严格模式下为 undefined
+- `this` 的指向不是在函数定义时确定的，而是在函数调用时确定
+- `this` 默认情况下指向 `window`，严格模式下为 `undefined`
 
 ### this 指向分类
 
 #### :one: 隐世绑定
 
-:star: **重点**: this 指向距离其**最近的调用者**
+:star: **重点**: `this` 指向距离其**最近的调用者**
 
 所谓的**最近的调用者**就函数前面最近的一个对象。
 
@@ -31,10 +31,10 @@ obj.test() // 输出: obj { name: 'Mike', test: f () }
 
 ####  :two: 显式绑定
 
-在 JavaScript 中，call, apply, bind 可以修改 this 的指向: 
+在 JavaScript 中，`call`, `apply`, `bind` 可以修改 `this` 的指向: 
 
-1. 函数调用 call, apply, bind 后，绑定的 this 会指向传入的第一个参数  
-2. 如果函数调用 call, apply, bind 时没有传入参数，则指向默认对象 window(或 undefined)
+1. 函数调用 `call`, `apply`, `bind` 后，绑定的 `this` 会指向传入的第一个参数  
+2. 如果函数调用 `call`, `apply`, `bind` 时没有传入参数，则指向默认对象 `window`(或 `undefined`)
 
 ```javascript
 function test() {
@@ -78,26 +78,26 @@ console.log(new testObj()) // 输出: {name: "Jack"}
 console.log(new testBasic()) // 输出: testBasic {name: "Rose"}
 ```
 
-:star: **重点**: 构造函数中的this指向该函数创建的实例对象
+:star: **重点**: 构造函数中的 `this` 指向该函数创建的实例对象
 
 :star::star::star: 拓展：
 
 如果该构造函数返回一个对象类型(如`Object`, `Array`, `Function`, `Symbol`,  `null` 除外)，则通过`new` 关键字创建的实例指向其返回值，否则返回该构造函数创建的实例对象。
 
-#### :four: 箭头函数中的 this
+#### :four: 箭头函数中的 `this`
 
 > 摘自 MDN — 箭头函数
 
-不只有箭头函数中的 this 指向，更是对箭头函数的总结！！！
+不只有箭头函数中的 `this` 指向，更是对箭头函数的总结！！！
 
 > MDN: **箭头函数表达式**的语法比**函数表达式**更简洁，并且没有自己的 `this`，`arguments`，`super` 或 `new.target`。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。
 
 > 引入箭头函数有两个方面的作用：更简短的函数并且不绑定this。  
 
-> **没有单独的this**：在箭头函数出现之前，每一个新函数根据它是被如何调用的来定义这个函数的this值：
+> **没有单独的this**：在箭头函数出现之前，每一个新函数根据它是被如何调用的来定义这个函数的 `this` 值：
 > 
 > - 如果是该函数是一个构造函数，`this` 指针指向一个新的对象
-> - 在严格模式下的函数调用下，`this` 指向undefined
+> - 在严格模式下的函数调用下，`this` 指向 `undefined`
 > - 如果是该函数是一个对象的方法，则它的 `this` 指针指向这个对象
 > - 等等
 
@@ -216,25 +216,25 @@ obj.b; // undefined   "undefined"   Window {postMessage: ƒ, blur: ƒ, focus: ƒ
 
 结论：箭头函数没有定义this绑定。
 
-:star: **使用 new 操作符**
+:star: **使用 `new` 操作符**
 
-箭头函数不能用作构造器，和 new一起用会抛出错误。
+箭头函数不能用作构造器，和 `new` 一起用会抛出错误。
 
 ```javascript
 var Foo = () => {};
 var foo = new Foo(); // TypeError: Foo is not a constructor
 ```
 
-:star: **使用prototype属性**
+:star: **使用 `prototype` 属性**
 
-箭头函数没有prototype属性。
+箭头函数没有 `prototype` 属性。
 
 ```javascript
 var Foo = () => {};
 console.log(Foo.prototype); // undefined
 ```
 
-:star: **使用 yield 关键字**
+:star: **使用 `yield` 关键字**
 
 `yield` 关键字通常不能在箭头函数中使用（除非是嵌套在允许使用的函数内）。因此，箭头函数不能用作函数生成器。
 
@@ -242,7 +242,7 @@ console.log(Foo.prototype); // undefined
 
 - 箭头函数本身不会创建 `this`，只会从上级作用域(作用域链)继承 `this` 
 - 箭头函数的严格模式下，对于this 相关的规则会被忽略，也就是说不会影响其继承上级作用域的 `this`。
-- 箭头函数不能作为 构造函数，也就是不能与 new 一起使用。
+- 箭头函数不能作为 构造函数，也就是不能与 `new` 一起使用。
 - 箭头函数调用 `bind`、`call`、`apply` 时，传入的 `this` 会被忽略。
 - 箭头函数没有 原型 `prototype` 属性。
 - 箭头函数没有绑定 arguments，如果在其中使用的话，则是来自上级作用域(函数作用域)的。
@@ -253,9 +253,9 @@ console.log(Foo.prototype); // undefined
 
 #### :six: DOM 事件处理函数中的 this
 
-> 摘自 MDN — this
+> 摘自 MDN — `this`
 
-当函数被用作事件处理函数时，它的 this 指向触发事件的元素（一些浏览器在使用非 addEventListener 的函数动态地添加监听函数时不遵守这个约定）。
+当函数被用作事件处理函数时，它的 `this` 指向触发事件的元素（一些浏览器在使用非 `addEventListener` 的函数动态地添加监听函数时不遵守这个约定）。
 
 ```javascript
 // 被调用时，将关联的元素变成蓝色
@@ -278,7 +278,7 @@ for(var i=0 ; i<elements.length ; i++){
 
 #### :seven: 内联事件处理函数中的 this
 
-> 摘自 MDN — this
+> 摘自 MDN — `this`
 
 [代码](https://codepen.io/savoygu/pen/jOyaxoo)
 
@@ -325,16 +325,16 @@ obj.foo() // 依次输出  obj、window
 
 应对方案：
 
-1.  在 foo 函数中声明一个变量 that 来保存 this，然后在 bar 函数中使用 that(其本质是 把 this 体系转换为了作用域的体系)  
-2. 使用 ES6 中的箭头函数来创建 bar 函数(ES6 中的箭头函数并不会创建其自身的执行上下文，所以箭头函数中的 this 取决于它的外部函数)
+1.  在 `foo` 函数中声明一个变量 `that` 来保存 `this`，然后在 `bar` 函数中使用 `that`(其本质是 把 `this` 体系转换为了作用域的体系)  
+2. 使用 ES6 中的箭头函数来创建 `bar` 函数(ES6 中的箭头函数并不会创建其自身的执行上下文，所以箭头函数中的 `this` 取决于它的外部函数)
 
-:two: 普通函数中的 this 默认指向全局对象 window
+:two: 普通函数中的 `this` 默认指向全局对象 `window`
 
-在默认情况下调用一个函数，其执行上下文中的 this 是默认指向全局对象 window 的。
+在默认情况下调用一个函数，其执行上下文中的 `this` 是默认指向全局对象 `window` 的。
 
-如果要让函数执行上下文中的 this 指向某个对象，最好的方式是通过 call、apply 方法来显式调用。
+如果要让函数执行上下文中的 `this` 指向某个对象，最好的方式是通过 `call`、`apply` 方法来显式调用。
 
-这个问题可以通过为函数设置 JavaScript 的 “严格模式“来解决。因为在严格模式下，默认执行一个函数，其函数的执行上下文中的 this 值是 undefined。
+这个问题可以通过为函数设置 JavaScript 的 “严格模式“来解决。因为在严格模式下，默认执行一个函数，其函数的执行上下文中的 `this` 值是 `undefined`。
 
 ### 参考
 

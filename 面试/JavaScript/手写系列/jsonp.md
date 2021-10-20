@@ -8,8 +8,8 @@
 
 ### 执行过程
 
- 1. 前端定义一个解析函数：jsonpCallBack = function (res) {}
- 2. 通过 params 的形式包装 script 标签的请求参数，并且声明执行函数，如：cb = jsonpCallBack
+ 1. 前端定义一个解析函数：`jsonpCallBack = function (res) {}`
+ 2. 通过 params 的形式包装 script 标签的请求参数，并且声明执行函数，如：`cb = jsonpCallBack`
  3. 后端获取前端声明的执行函数（jsonpCallBack），并且带上参数且调用函数的方式传递给前端
  4. 前端再 script 标签返回资源的时候就会执行 jsonpCallBack 并通过回调函数的方式拿到数据。
 
@@ -50,7 +50,7 @@ function jsonp({
 存在的问题，为了防止回调被覆盖，每个 jsonp 请求都需要传入 callbackName 并在 window 上定义 callbackName 函数，这样会对全局环境造成污染。
 
 ####  :woman_technologist::technologist: 完整版 — 多个请求
- 
+
 - 让 callbackName 是一个唯一的，可以使用 id 递增的方式
 - 把回调定义在 jsonp.cbs 数组上，避免污染全局环境
 
