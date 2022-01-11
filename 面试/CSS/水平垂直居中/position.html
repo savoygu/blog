@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 基于 父容器 relative + 子元素 absolute + margin auto */
+      /* 定宽高 与 不定宽高皆可 */
+      .parent {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-color: rebeccapurple;
+      }
+      .child {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background-color: yellow;
+        width: 100px;
+        height: 100px;
+      }
+
+      /* 基于 父容器 relative + 子元素 absolute + transform */
+      /* 定宽高 与 不定宽高皆可 */
+      .parent-2 {
+        position: sticky;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+
+      .child-2 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: yellow;
+        width: 100px;
+        height: 100px;
+      }
+
+      /* 基于 父容器 relative + 子元素 absolute + 负 margin */
+      /* 定宽高 */
+      .parent-3 {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+
+      .child-3 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -50px;
+        margin-top: -50px;
+        background-color: yellow;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">中</div>
+    </div>
+
+    <hr />
+
+    <div class="parent-2">
+      <div class="child-2">中</div>
+    </div>
+
+    <hr />
+
+    <!-- <div class="parent-3">
+      <div class="child-3">中</div>
+    </div> -->
+  </body>
+</html>
