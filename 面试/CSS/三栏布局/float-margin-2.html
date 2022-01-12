@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>基于 float 和 margin 的三栏布局</title>
+    <style>
+      html,
+      body,
+      .container,
+      .left,
+      .main,
+      .right {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .container {
+      }
+      .left,
+      .right {
+        width: 200px;
+        background-color: rebeccapurple;
+      }
+      .main {
+        margin-left: 200px;
+        margin-right: 200px;
+        background-color: red;
+        overflow: auto;
+      }
+      .left {
+        float: left;
+      }
+      .right {
+        float: right;
+      }
+
+      .content {
+        height: 2000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="main">
+        <div class="content"></div>
+      </div>
+    </div>
+  </body>
+</html>

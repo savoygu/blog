@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>基于 float 和 margin 的三栏布局（圣杯布局）</title>
+    <style>
+      html,
+      body,
+      .container,
+      .left,
+      .main,
+      .right {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .container {
+        padding-left: 200px;
+        padding-right: 200px;
+      }
+      .left,
+      .right {
+        float: left;
+
+        width: 200px;
+        background-color: rebeccapurple;
+      }
+
+      .main {
+        float: left;
+        width: 100%;
+
+        background-color: red;
+        overflow: auto;
+      }
+
+      .left {
+        position: relative;
+        left: -200px;
+        margin-left: -100%;
+      }
+
+      .right {
+        position: relative;
+        right: -200px;
+        margin-left: -200px;
+      }
+
+      .content {
+        height: 2000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <div class="content"></div>
+      </div>
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+  </body>
+</html>
