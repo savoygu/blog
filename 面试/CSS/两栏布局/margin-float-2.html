@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>基于 float 和 margin 实现两栏布局</title>
+    <style>
+      html,
+      body,
+      .container,
+      .aside,
+      .main,
+      .main-wrapper {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .container {
+      }
+
+      .aside {
+        float: left;
+        width: 200px;
+        margin-right: -100%;
+
+        background-color: rebeccapurple;
+      }
+
+      .main-wrapper {
+        float: left;
+        width: 100%;
+      }
+
+      .main {
+        margin-left: 200px;
+
+        background-color: red;
+        overflow: auto;
+      }
+
+      .content {
+        height: 2000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="aside"></div>
+      <div class="main-wrapper">
+        <div class="main">
+          <div class="content"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
