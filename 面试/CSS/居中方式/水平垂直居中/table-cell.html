@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>基于父元素 table-cell + 子元素 inline-block 的方式</title>
     <style>
       .parent {
-        display: table-cell;
+        display: table-cell; /* 核心样式 */
         text-align: center;
         vertical-align: middle;
 
@@ -16,7 +16,8 @@
         background-color: rebeccapurple;
       }
       .child {
-        display: inline-block;
+        display: inline-block; /* 核心样式 */
+
         background-color: yellow;
         width: 100px;
         height: 100px;
