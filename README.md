@@ -10,16 +10,16 @@
 
 ### CSS 篇
 
-1. :tada: [居中方式](https://github.com/savoygu/blog/tree/master/%E9%9D%A2%E8%AF%95/CSS/%E5%B1%85%E4%B8%AD%E6%96%B9%E5%BC%8F.md) :star::star::star:
+1. :tada: 制作布局
 
-2. :tada: 制作布局
-
-   - :tada: [定位 Position](https://github.com/savoygu/blog/tree/master/%E9%9D%A2%E8%AF%95/CSS/Position.md)
    - :tada: [CSS 盒模型](https://github.com/savoygu/blog/tree/master/%E9%9D%A2%E8%AF%95/CSS/%E7%9B%92%E6%A8%A1%E5%9E%8B.md) :star::star::star:
+   - :tada: [定位 Position](https://github.com/savoygu/blog/tree/master/%E9%9D%A2%E8%AF%95/CSS/Position.md)
    - :tada: [弹性布局 Flex](https://github.com/savoygu/blog/tree/master/%E9%9D%A2%E8%AF%95/CSS/Flex.md)
    - :tada: [网格布局 Grid](https://github.com/savoygu/blog/tree/master/%E9%9D%A2%E8%AF%95/CSS/Grid.md)
 
-3. :tada: [两栏布局](https://github.com/savoygu/blog/tree/master/%E9%9D%A2%E8%AF%95/CSS/%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80.md)、[三栏布局](https://github.com/savoygu/blog/tree/master/%E9%9D%A2%E8%AF%95/CSS/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80.md) :star::star::star:
+2. :tada: [两栏布局](https://github.com/savoygu/blog/tree/master/%E9%9D%A2%E8%AF%95/CSS/%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80.md)、[三栏布局](https://github.com/savoygu/blog/tree/master/%E9%9D%A2%E8%AF%95/CSS/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80.md) :star::star::star:
+
+3. :tada: [居中方式](https://github.com/savoygu/blog/tree/master/%E9%9D%A2%E8%AF%95/CSS/%E5%B1%85%E4%B8%AD%E6%96%B9%E5%BC%8F.md) :star::star::star:
 
 4. :tada: [BFC](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/CSS/BFC.md) :star::star::star:
 
@@ -77,21 +77,21 @@
 
    - :construction: [DOM Api]()
 
-   - :construction: [事件委托]()
-
-   - :construction: [事件冒泡、事件捕获]()
+   - :construction: [DOM 事件]()
 
 ### 浏览器篇
 
-- :construction: [重绘/回流]()
+- :tada: [重绘/回流](https://github.com/savoygu/blog/tree/master/%E9%9D%A2%E8%AF%95/%E6%B5%8F%E8%A7%88%E5%99%A8/%E9%87%8D%E7%BB%98%E5%9B%9E%E6%B5%81.md)
 
-- :construction: [渲染机制]()
+- :tada: [渲染机制](https://github.com/savoygu/blog/tree/master/%E9%9D%A2%E8%AF%95/%E6%B5%8F%E8%A7%88%E5%99%A8/%E6%B8%B2%E6%9F%93%E6%9C%BA%E5%88%B6.md)
 
 - :construction: [跨域]()
 
 - :construction: [Cookie]()
 
 - :construction: [本地存储]()
+
+- :construction: [浏览器缓存]()
 
 - :construction: [从输入 URL 到页面呈现发生了什么]()
 
@@ -171,6 +171,8 @@
 
 - :construction: [双线程模型]()
 
+- :construction: [如何设计一个小程序框架]()
+
 ### 常用库篇
 
 - Axios
@@ -190,6 +192,10 @@
 - :construction: [CSRF]()
 
 - :construction: [XSS]()
+
+### 综合篇
+
+- :construction: [说说一个大文件上传和断点续传的实现思路]()
 
 ### 算法与数据结构篇
 
