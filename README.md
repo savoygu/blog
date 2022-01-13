@@ -12,12 +12,12 @@
 
 1. :tada: [居中方式](https://github.com/savoygu/blog/tree/master/%E9%9D%A2%E8%AF%95/CSS/%E5%B1%85%E4%B8%AD%E6%96%B9%E5%BC%8F.md) :star::star::star:
 
-2. :construction: 制作布局
+2. :tada: 制作布局
 
-   - :construction: [定位 Position](https://github.com/savoygu/blog/tree/master/%E9%9D%A2%E8%AF%95/CSS/Position.md)
+   - :tada: [定位 Position](https://github.com/savoygu/blog/tree/master/%E9%9D%A2%E8%AF%95/CSS/Position.md)
    - :tada: [CSS 盒模型](https://github.com/savoygu/blog/tree/master/%E9%9D%A2%E8%AF%95/CSS/%E7%9B%92%E6%A8%A1%E5%9E%8B.md) :star::star::star:
-   - :construction: [弹性布局 Flex](https://github.com/savoygu/blog/tree/master/%E9%9D%A2%E8%AF%95/CSS/Flex.md)
-   - :construction: [网格布局 Grid](https://github.com/savoygu/blog/tree/master/%E9%9D%A2%E8%AF%95/CSS/Grid.md)
+   - :tada: [弹性布局 Flex](https://github.com/savoygu/blog/tree/master/%E9%9D%A2%E8%AF%95/CSS/Flex.md)
+   - :tada: [网格布局 Grid](https://github.com/savoygu/blog/tree/master/%E9%9D%A2%E8%AF%95/CSS/Grid.md)
 
 3. :tada: [两栏布局](https://github.com/savoygu/blog/tree/master/%E9%9D%A2%E8%AF%95/CSS/%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80.md)、[三栏布局](https://github.com/savoygu/blog/tree/master/%E9%9D%A2%E8%AF%95/CSS/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80.md) :star::star::star:
 
