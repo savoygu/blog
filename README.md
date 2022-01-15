@@ -87,9 +87,7 @@
 
 - :tada: [跨域](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/%E6%B5%8F%E8%A7%88%E5%99%A8/%E8%B7%A8%E5%9F%9F.md)
 
-- :construction: [Cookie]()
-
-- :construction: [本地存储]()
+- :tada: [本地存储](https://github.com/savoygu/blog/blob/master/%E9%9D%A2%E8%AF%95/%E6%B5%8F%E8%A7%88%E5%99%A8/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8.md)
 
 - :construction: [浏览器缓存]()
 
